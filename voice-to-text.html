@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice to Text – Free Live Speech-to-Text Dictation | Audio Toolkit</title>
+<meta name="description" content="Speak and see live text appear, free. A live dictation tool using your browser's speech recognition — note this is not fully private like our other tools, since it uses a cloud speech service." />
+<meta name="keywords" content="voice to text, speech to text online free, dictation online, talk to text free" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://audiotoolkit.github.io/voice-to-text.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Audio Toolkit" />
+<meta property="og:title" content="Voice to Text – Free Live Speech-to-Text Dictation" />
+<meta property="og:description" content="Speak and see live text appear, free, using your browser's built-in speech recognition." />
+<meta property="og:url" content="https://audiotoolkit.github.io/voice-to-text.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Voice to Text – Free Live Speech-to-Text Dictation" />
+<meta name="twitter:description" content="Speak and see live text appear, free, using your browser's built-in speech recognition." />
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "SoftwareApplication",
+"name": "Voice to Text",
+"url": "https://audiotoolkit.github.io/voice-to-text.html",
+"applicationCategory": "MultimediaApplication",
+"operatingSystem": "Any (runs in browser)",
+"description": "Free live dictation tool that converts spoken words to text in real time using the browser's built-in speech recognition.",
+"offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Can this transcribe an audio file I already have, like an MP3?",
+"acceptedAnswer": { "@type": "Answer", "text": "No, and this is an important limitation to be upfront about. Browser speech recognition only works with live microphone input, not existing audio files. This tool is for dictating out loud in real time, not transcribing a recording you already have." }
+},
+{
+"@type": "Question",
+"name": "Is this tool private like the rest of Audio Toolkit?",
+"acceptedAnswer": { "@type": "Answer", "text": "No, and we want to be upfront about that. Unlike every other tool on this site, which processes audio entirely on your device, browser speech recognition (in Chrome, for example) sends your voice to a cloud service to generate the text. Don't use this for anything sensitive." }
+},
+{
+"@type": "Question",
+"name": "Which browsers support this?",
+"acceptedAnswer": { "@type": "Answer", "text": "Chrome and Edge have the most reliable support. Safari has partial support. Firefox does not support the Web Speech API's recognition feature at all as of this writing." }
+},
+{
+"@type": "Question",
+"name": "Why does the transcript sometimes get words wrong?",
+"acceptedAnswer": { "@type": "Answer", "text": "Speech recognition accuracy depends on your microphone quality, background noise, accent, and speaking pace. Speaking clearly and pausing briefly between sentences generally improves accuracy." }
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audiotoolkit.github.io/" },
+{ "@type": "ListItem", "position": 2, "name": "Voice to Text", "item": "https://audiotoolkit.github.io/voice-to-text.html" }
+]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:#1E1B2E;line-height:1.65}
+nav{position:sticky;top:0;z-index:100;background:rgba(15,12,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,92,246,0.18);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:1.25rem;font-weight:800;color:var(--white);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:#B8B3D1;text-decoration:none;font-size:.9rem;font-weight:500}
+.nav-links a:hover{color:var(--accent)}
+@media(max-width:640px){.nav-links{display:none}}
+.breadcrumb{background:var(--light);border-bottom:1px solid var(--border);padding:10px 5%;font-size:.82rem;color:var(--slate)}
+.breadcrumb a{color:var(--accent2);text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--bg) 0%,#241A3D 100%);padding:56px 5% 46px;text-align:center}
+.hero-badge{display:inline-block;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.35);color:#C4B5FD;font-size:.76rem;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;color:var(--white);letter-spacing:-.5px;margin-bottom:12px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:#B8B3D1;font-size:1rem;max-width:560px;margin:0 auto}
+.tool-wrap{max-width:680px;margin:-24px auto 0;padding:0 5% 40px;position:relative;z-index:2}
+.tool-box{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 20px 50px rgba(30,20,60,0.14);padding:30px}
+.privacy-banner{background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:.86rem;color:#991B1B}
+.unsupported-banner{background:#FEF3C7;border:1px solid #FDE68A;border-radius:10px;padding:14px 16px;margin-bottom:20px;font-size:.86rem;color:#92400E;display:none}
+.unsupported-banner.show{display:block}
+.mic-row{display:flex;justify-content:center;margin-bottom:18px}
+.mic-btn{width:74px;height:74px;border-radius:50%;border:none;background:var(--accent);color:white;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;box-shadow:0 6px 20px rgba(139,92,246,0.35)}
+.mic-btn svg{width:30px;height:30px;stroke:white;fill:none;stroke-width:2}
+.mic-btn.listening{background:#DC2626;animation:pulse 1.5s infinite}
+.mic-btn:disabled{opacity:.4;cursor:not-allowed}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(220,38,38,0.5)}70%{box-shadow:0 0 0 16px rgba(220,38,38,0)}100%{box-shadow:0 0 0 0 rgba(220,38,38,0)}}
+.mic-label{text-align:center;font-size:.85rem;color:var(--slate);margin-bottom:20px}
+#transcript{width:100%;min-height:180px;border:1px solid var(--border);border-radius:12px;padding:16px;font-size:.98rem;font-family:var(--font);resize:vertical;line-height:1.6}
+.interim{color:var(--slate)}
+.controls-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.btn{flex:1;min-width:120px;padding:12px 16px;border-radius:10px;font-weight:700;font-size:.9rem;cursor:pointer;border:none;transition:all .15s;font-family:var(--font)}
+.btn-secondary{background:var(--light);color:#1E1B2E;border:1px solid var(--border)}
+.btn-secondary:hover{background:#EDE9F7}
+.btn-download{background:var(--accent);color:white}
+.btn-download:hover{background:var(--accent2)}
+.status-msg{margin-top:14px;font-size:.85rem;text-align:center;color:var(--slate);min-height:20px}
+section.content{padding:56px 5%;max-width:820px;margin:0 auto}
+.section-block{padding:44px 0;border-bottom:1px solid var(--border)}
+.section-block:last-child{border-bottom:none}
+.section-label{color:var(--accent2);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.section-block h2{font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+.section-block p{color:#3F3B52;font-size:.96rem;margin-bottom:13px}
+.section-block p:last-child{margin-bottom:0}
+.faq-item{border-bottom:1px solid var(--border);padding:15px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:700;font-size:.96rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-a{color:#3F3B52;font-size:.92rem;margin-top:9px;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-arrow{color:var(--accent);transition:transform .2s}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:8px}
+.related-card{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:#1E1B2E;transition:all .2s;display:flex;flex-direction:column;gap:6px}
+.related-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.related-card h3{font-size:.92rem;font-weight:700}
+.related-card p{font-size:.8rem;color:var(--slate);margin:0}
+footer{background:var(--bg);color:#8781A0;text-align:center;padding:34px 5%}
+.footer-logo{color:var(--white);font-weight:800;font-size:1.05rem;margin-bottom:12px}
+.footer-logo span{color:var(--accent)}
+.footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
+footer p{font-size:.8rem}
+</style>
+</head>
+<body>
+<nav>
+<a class="logo" href="index.html">Audio <span>Toolkit</span></a>
+<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Voice to Text</div>
+<section class="hero">
+<div class="hero-badge">Free · Live Dictation</div>
+<h1>Voice to Text <span>Free, Live</span></h1>
+<p>Speak and watch the text appear in real time. Note: unlike our other tools, this isn't fully private — see below.</p>
+</section>
+<div class="tool-wrap">
+<div class="tool-box">
+<div class="privacy-banner">🔒 <strong>Not fully private, unlike our other tools:</strong> your browser's speech recognition (e.g., Google's service in Chrome) processes your voice in the cloud to generate text. Don't use this for sensitive content.</div>
+<div class="unsupported-banner" id="unsupportedBanner">⚠ Your browser doesn't support live speech recognition. Try Chrome or Edge on desktop.</div>
+<div class="mic-row">
+<button class="mic-btn" id="micBtn">
+<svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg>
+</button>
+</div>
+<div class="mic-label" id="micLabel">Tap to start speaking</div>
+<textarea id="transcript" placeholder="Your transcript will appear here…"></textarea>
+<div class="controls-row">
+<button class="btn btn-secondary" id="clearBtn">Clear</button>
+<button class="btn btn-secondary" id="copyBtn">Copy Text</button>
+<button class="btn btn-download" id="downloadBtn">⬇ Download .txt</button>
+</div>
+<div class="status-msg" id="statusMsg"></div>
+</div>
+</div>
+<section class="content">
+<div class="section-block">
+<div class="section-label">How It Works</div>
+<h2>How to Use Voice to Text</h2>
+<p><strong>1. Tap the microphone button</strong> and allow microphone access when your browser asks.</p>
+<p><strong>2. Start speaking.</strong> Text appears as you talk — lighter gray text is still being processed, and turns solid black once finalized.</p>
+<p><strong>3. Tap the microphone again to stop,</strong> then copy the text or download it as a .txt file.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Being Upfront</div>
+<h2>Why This Tool Isn't Fully Private</h2>
+<p>Every other tool on Audio Toolkit processes your file entirely on your device using the Web Audio API — nothing is ever uploaded. This tool is different: browser speech recognition doesn't run locally. In Chrome, for example, your microphone audio is sent to Google's servers, converted to text there, and sent back. We'd rather tell you this plainly than let you assume it works the same way as everything else here.</p>
+<p>If privacy matters for what you're dictating, this isn't the right tool for it.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Good To Know</div>
+<h2>Getting Better Results</h2>
+<p><strong>This only works with live speech</strong> — it cannot transcribe an audio file you've already recorded. If you have an MP3 or voice memo to transcribe, this tool can't help with that; it's built for dictating out loud in the moment.</p>
+<p><strong>Speak clearly and at a normal pace.</strong> Very fast speech, heavy background noise, or a poor microphone will reduce accuracy.</p>
+<p><strong>Punctuation isn't automatic.</strong> Say "comma," "period," or "new line" out loud if you want them inserted, or add punctuation manually afterward.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Common Questions</div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can this transcribe an audio file I already have, like an MP3? <span class="faq-arrow">▾</span></div>
+<div class="faq-a">No, and this is an important limitation to be upfront about. Browser speech recognition only works with live microphone input, not existing audio files. This tool is for dictating out loud in real time, not transcribing a recording you already have.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is this tool private like the rest of Audio Toolkit?</div>
+<div class="faq-a">No, and we want to be upfront about that. Unlike every other tool on this site, which processes audio entirely on your device, browser speech recognition (in Chrome, for example) sends your voice to a cloud service to generate the text. Don't use this for anything sensitive.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Which browsers support this?</div>
+<div class="faq-a">Chrome and Edge have the most reliable support. Safari has partial support. Firefox does not support the Web Speech API's recognition feature at all as of this writing.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why does the transcript sometimes get words wrong?</div>
+<div class="faq-a">Speech recognition accuracy depends on your microphone quality, background noise, accent, and speaking pace. Speaking clearly and pausing briefly between sentences generally improves accuracy.</div>
+</div>
+</div>
+<div class="section-block">
+<div class="section-label">More Tools</div>
+<h2>Related Tools</h2>
+<div class="related-grid">
+<a href="voice-recorder.html" class="related-card"><h3>Voice Recorder</h3><p>Record and save audio from your mic</p></a>
+<a href="text-to-speech.html" class="related-card"><h3>Text to Speech</h3><p>Hear text read aloud instead</p></a>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-logo">Audio <span>Toolkit</span></div>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-service.html">Terms of Service</a>
+<a href="contact.html">Contact</a>
+</div>
+<p>© 2026 Audio Toolkit. All rights reserved.</p>
+</footer>
+<script>
+const micBtn = document.getElementById('micBtn');
+const micLabel = document.getElementById('micLabel');
+const transcriptEl = document.getElementById('transcript');
+const statusMsg = document.getElementById('statusMsg');
+const unsupportedBanner = document.getElementById('unsupportedBanner');
+let recognition = null;
+let listening = false;
+let finalTranscript = '';
+
+const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if (!SpeechRecognitionAPI) {
+unsupportedBanner.classList.add('show');
+micBtn.disabled = true;
+micLabel.textContent = 'Not supported in this browser';
+} else {
+recognition = new SpeechRecognitionAPI();
+recognition.continuous = true;
+recognition.interimResults = true;
+recognition.lang = 'en-US';
+
+recognition.onresult = (event) => {
+let interim = '';
+for (let i = event.resultIndex; i < event.results.length; i++) {
+const text = event.results[i][0].transcript;
+if (event.results[i].isFinal) {
+finalTranscript += text + ' ';
+} else {
+interim += text;
+}
+}
+transcriptEl.value = finalTranscript + interim;
+};
+
+recognition.onerror = (event) => {
+if (event.error === 'not-allowed' || event.error === 'permission-denied') {
+statusMsg.textContent = 'Microphone access was denied. Please allow it and try again.';
+} else if (event.error === 'no-speech') {
+statusMsg.textContent = 'No speech detected — try again.';
+} else {
+statusMsg.textContent = 'Something went wrong (' + event.error + '). Try again.';
+}
+stopListening();
+};
+
+recognition.onend = () => {
+if (listening) {
+try { recognition.start(); } catch (e) { stopListening(); }
+}
+};
+}
+
+function startListening() {
+if (!recognition) return;
+try {
+recognition.start();
+listening = true;
+micBtn.classList.add('listening');
+micLabel.textContent = 'Listening… tap to stop';
+statusMsg.textContent = '';
+} catch (e) {
+statusMsg.textContent = 'Could not start microphone. Try again.';
+}
+}
+
+function stopListening() {
+listening = false;
+micBtn.classList.remove('listening');
+micLabel.textContent = 'Tap to start speaking';
+if (recognition) { try { recognition.stop(); } catch (e) {} }
+}
+
+micBtn.addEventListener('click', () => {
+if (listening) stopListening();
+else startListening();
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+finalTranscript = '';
+transcriptEl.value = '';
+statusMsg.textContent = '';
+});
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+transcriptEl.select();
+document.execCommand('copy');
+statusMsg.textContent = '✓ Copied to clipboard';
+});
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+const text = transcriptEl.value.trim();
+if (!text) {
+statusMsg.textContent = 'Nothing to download yet — start speaking first.';
+return;
+}
+const blob = new Blob([text], { type: 'text/plain' });
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = 'transcript.txt';
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+setTimeout(() => URL.revokeObjectURL(url), 3000);
+statusMsg.textContent = '✓ Transcript downloaded';
+});
+</script>
+</body>
+</html>
