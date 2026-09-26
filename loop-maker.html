@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Loop Maker – Repeat a Clip Online Free | Audio Toolkit</title>
+  <meta name="description" content="Repeat any audio clip to make a loop, free and online. Set the number of repeats or a target length — entirely in your browser." />
+  <meta name="keywords" content="audio loop maker, repeat audio online, loop mp3 free, make audio loop" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://audiotoolkit.github.io/loop-maker.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Audio Toolkit" />
+  <meta property="og:title" content="Audio Loop Maker – Repeat a Clip Online Free" />
+  <meta property="og:description" content="Repeat any audio clip to make a loop, free and online, entirely in your browser." />
+  <meta property="og:url" content="https://audiotoolkit.github.io/loop-maker.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Audio Loop Maker – Repeat a Clip Online Free" />
+  <meta name="twitter:description" content="Repeat any audio clip to make a loop, free, entirely in your browser." />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Audio Loop Maker",
+  "url": "https://audiotoolkit.github.io/loop-maker.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free online tool to repeat an audio clip into a longer loop. Processes entirely in the browser.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will the loop have a click or gap between repeats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool joins repeats back-to-back with no added silence. If your original clip doesn't start and end at the same volume level, you may hear a subtle click at each loop point \u2014 trimming the clip to start and end on silence, or a matching point in a waveform, gives the cleanest loop." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I set an exact target length instead of a repeat count?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch to 'Target Length' mode and enter how long you want the final file to be \u2014 the tool calculates how many repeats are needed and trims the final repeat if necessary to hit that length exactly." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my audio file uploaded to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The loop is built locally in your browser using the Web Audio API. Your file is never uploaded." }
+    },
+    {
+      "@type": "Question",
+      "name": "What's this useful for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Common uses include background ambience for videos or streams, extending a short sound effect, practice loops for musicians, and simple looping alarm or notification tones." }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audiotoolkit.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Audio Loop Maker", "item": "https://audiotoolkit.github.io/loop-maker.html" }
+  ]
+}
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--white);color:#1E1B2E;line-height:1.65}
+    nav{position:sticky;top:0;z-index:100;background:rgba(15,12,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,92,246,0.18);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px}
+    .logo{font-size:1.25rem;font-weight:800;color:var(--white);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:26px;list-style:none}
+    .nav-links a{color:#B8B3D1;text-decoration:none;font-size:.9rem;font-weight:500}
+    .nav-links a:hover{color:var(--accent)}
+    @media(max-width:640px){.nav-links{display:none}}
+    .breadcrumb{background:var(--light);border-bottom:1px solid var(--border);padding:10px 5%;font-size:.82rem;color:var(--slate)}
+    .breadcrumb a{color:var(--accent2);text-decoration:none}
+    .hero{background:linear-gradient(135deg,var(--bg) 0%,#241A3D 100%);padding:56px 5% 46px;text-align:center}
+    .hero-badge{display:inline-block;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.35);color:#C4B5FD;font-size:.76rem;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px}
+    .hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;color:var(--white);letter-spacing:-.5px;margin-bottom:12px}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:#B8B3D1;font-size:1rem;max-width:560px;margin:0 auto}
+    .tool-wrap{max-width:600px;margin:-24px auto 0;padding:0 5% 40px;position:relative;z-index:2}
+    .tool-box{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 20px 50px rgba(30,20,60,0.14);padding:30px}
+    .upload-zone{border:2px dashed #D6D0EC;border-radius:14px;padding:44px 20px;text-align:center;cursor:pointer;transition:all .2s}
+    .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(139,92,246,0.04)}
+    .upload-icon{width:52px;height:52px;margin:0 auto 14px;background:rgba(139,92,246,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center}
+    .upload-icon svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:2}
+    .upload-zone h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
+    .upload-zone p{color:var(--slate);font-size:.88rem}
+    .upload-zone input{display:none}
+    .editor{display:none}
+    .editor.active{display:block}
+    .file-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:.85rem;color:var(--slate)}
+    .file-info strong{color:#1E1B2E}
+    .change-file{color:var(--accent2);text-decoration:none;font-weight:600;font-size:.85rem;cursor:pointer;background:none;border:none}
+    .mode-row{display:flex;gap:10px;margin-bottom:18px}
+    .mode-btn{flex:1;padding:12px;border-radius:10px;border:2px solid var(--border);background:var(--light);text-align:center;cursor:pointer;font-weight:700;font-size:.86rem}
+    .mode-btn.selected{border-color:var(--accent);background:rgba(139,92,246,0.08);color:var(--accent2)}
+    .input-row{margin-bottom:18px}
+    .input-row label{font-size:.78rem;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.03em;display:block;margin-bottom:8px}
+    .input-row input{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border);font-size:.92rem;font-family:var(--font);background:var(--light)}
+    .result-readout{font-size:.85rem;color:var(--slate);text-align:center;margin-bottom:16px}
+    .result-readout strong{color:#1E1B2E}
+    .controls-row{display:flex;gap:10px}
+    .btn{flex:1;min-width:140px;padding:13px 18px;border-radius:10px;font-weight:700;font-size:.92rem;cursor:pointer;border:none;transition:all .15s;font-family:var(--font)}
+    .btn-preview{background:var(--light);color:#1E1B2E;border:1px solid var(--border)}
+    .btn-preview:hover{background:#EDE9F7}
+    .btn-download{background:var(--accent);color:white}
+    .btn-download:hover{background:var(--accent2)}
+    .status-msg{margin-top:14px;font-size:.85rem;text-align:center;color:var(--slate);min-height:20px}
+    .status-msg.success{color:var(--green);font-weight:600}
+    section.content{padding:56px 5%;max-width:820px;margin:0 auto}
+    .section-block{padding:44px 0;border-bottom:1px solid var(--border)}
+    .section-block:last-child{border-bottom:none}
+    .section-label{color:var(--accent2);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .section-block h2{font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+    .section-block p{color:#3F3B52;font-size:.96rem;margin-bottom:13px}
+    .section-block p:last-child{margin-bottom:0}
+    .faq-item{border-bottom:1px solid var(--border);padding:15px 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-weight:700;font-size:.96rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-a{color:#3F3B52;font-size:.92rem;margin-top:9px;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-arrow{color:var(--accent);transition:transform .2s}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:8px}
+    .related-card{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:#1E1B2E;transition:all .2s;display:flex;flex-direction:column;gap:6px}
+    .related-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .related-card h3{font-size:.92rem;font-weight:700}
+    .related-card p{font-size:.8rem;color:var(--slate);margin:0}
+    footer{background:var(--bg);color:#8781A0;text-align:center;padding:34px 5%}
+    .footer-logo{color:var(--white);font-weight:800;font-size:1.05rem;margin-bottom:12px}
+    .footer-logo span{color:var(--accent)}
+    .footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+    .footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
+    footer p{font-size:.8rem}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
+  <ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Audio Loop Maker</div>
+
+<section class="hero">
+  <div class="hero-badge">Free · Private · No Signup</div>
+  <h1>Loop Audio <span>Online, Free</span></h1>
+  <p>Repeat any clip a set number of times, or to an exact target length — entirely in your browser.</p>
+</section>
+
+<div class="tool-wrap">
+  <div class="tool-box">
+
+    <div class="upload-zone" id="uploadZone">
+      <div class="upload-icon"><svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+      <h3>Drop an audio file here</h3>
+      <p>or click to browse — MP3, WAV, OGG, M4A supported</p>
+      <input type="file" id="fileInput" accept="audio/*" />
+    </div>
+
+    <div class="editor" id="editor">
+      <div class="file-info">
+        <span>File: <strong id="fileName"></strong></span>
+        <button class="change-file" id="changeFile">Choose different file</button>
+      </div>
+
+      <div class="mode-row">
+        <button class="mode-btn selected" id="modeCount">Repeat Count</button>
+        <button class="mode-btn" id="modeLength">Target Length</button>
+      </div>
+
+      <div class="input-row" id="countInputRow">
+        <label>Number of Repeats</label>
+        <input type="number" id="repeatCount" value="3" min="2" max="100" />
+      </div>
+      <div class="input-row" id="lengthInputRow" style="display:none">
+        <label>Target Length (seconds)</label>
+        <input type="number" id="targetLength" value="60" min="1" />
+      </div>
+
+      <div class="result-readout" id="resultReadout"></div>
+
+      <div class="controls-row">
+        <button class="btn btn-preview" id="previewBtn">▶ Preview Start</button>
+        <button class="btn btn-download" id="downloadBtn">⬇ Download Loop WAV</button>
+      </div>
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+  </div>
+</div>
+
+<section class="content">
+
+  <div class="section-block">
+    <div class="section-label">How It Works</div>
+    <h2>How to Loop an Audio Clip</h2>
+    <p><strong>1. Upload your clip.</strong> Drag and drop it into the upload area, or click to browse your device.</p>
+    <p><strong>2. Choose your mode.</strong> "Repeat Count" repeats it an exact number of times. "Target Length" calculates the repeats needed to hit a specific duration.</p>
+    <p><strong>3. Preview and download.</strong> Listen to the start of the loop, then download the full looped file as a WAV.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Why It Matters</div>
+    <h2>Clean, Gapless Looping</h2>
+    <p>This tool joins each repeat directly to the next with no added silence or crossfade, so the loop is as tight as your original clip allows. Everything runs through the Web Audio API in your browser, so even looping a clip 50+ times happens in a couple of seconds with no upload wait.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Good To Know</div>
+    <h2>Getting a Seamless Loop</h2>
+    <p><strong>Trim to a clean start and end point first.</strong> If your clip doesn't start and end at a similar volume level, you'll hear a subtle click at each loop boundary — use the <a href="audio-trimmer.html" style="color:var(--accent2)">Audio Trimmer</a> to find a cleaner cut point.</p>
+    <p><strong>"Target Length" trims the final repeat.</strong> If your target duration doesn't divide evenly into the clip length, the last repeat is cut short so the total length matches exactly.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Will the loop have a click or gap between repeats? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">This tool joins repeats back-to-back with no added silence. If your original clip doesn't start and end at the same volume level, you may hear a subtle click at each loop point — trimming the clip to start and end on silence, or a matching point in a waveform, gives the cleanest loop.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I set an exact target length instead of a repeat count?</div>
+      <div class="faq-a">Yes. Switch to "Target Length" mode and enter how long you want the final file to be — the tool calculates how many repeats are needed and trims the final repeat if necessary to hit that length exactly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my audio file uploaded to a server?</div>
+      <div class="faq-a">No. The loop is built locally in your browser using the Web Audio API. Your file is never uploaded.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's this useful for?</div>
+      <div class="faq-a">Common uses include background ambience for videos or streams, extending a short sound effect, practice loops for musicians, and simple looping alarm or notification tones.</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">More Tools</div>
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="audio-trimmer.html" class="related-card"><h3>Audio Trimmer</h3><p>Cut audio to exactly the part you need</p></a>
+      <a href="audio-merger.html" class="related-card"><h3>Audio Merger</h3><p>Combine multiple clips into one file</p></a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">Audio <span>Toolkit</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>© 2026 Audio Toolkit. All rights reserved.</p>
+</footer>
+
+<script>
+let audioCtx = null;
+let audioBuffer = null;
+let previewSource = null;
+let mode = 'count';
+
+const uploadZone = document.getElementById('uploadZone');
+const fileInput = document.getElementById('fileInput');
+const editor = document.getElementById('editor');
+const fileNameEl = document.getElementById('fileName');
+const modeCount = document.getElementById('modeCount');
+const modeLength = document.getElementById('modeLength');
+const countInputRow = document.getElementById('countInputRow');
+const lengthInputRow = document.getElementById('lengthInputRow');
+const repeatCount = document.getElementById('repeatCount');
+const targetLength = document.getElementById('targetLength');
+const resultReadout = document.getElementById('resultReadout');
+const statusMsg = document.getElementById('statusMsg');
+
+uploadZone.addEventListener('click', () => fileInput.click());
+uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
+uploadZone.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag');
+  if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => { if (e.target.files.length) handleFile(e.target.files[0]); });
+document.getElementById('changeFile').addEventListener('click', () => {
+  editor.classList.remove('active');
+  uploadZone.style.display = 'block';
+  fileInput.value = '';
+});
+
+modeCount.addEventListener('click', () => setMode('count'));
+modeLength.addEventListener('click', () => setMode('length'));
+function setMode(m) {
+  mode = m;
+  modeCount.classList.toggle('selected', m === 'count');
+  modeLength.classList.toggle('selected', m === 'length');
+  countInputRow.style.display = m === 'count' ? 'block' : 'none';
+  lengthInputRow.style.display = m === 'length' ? 'block' : 'none';
+  updateReadout();
+}
+repeatCount.addEventListener('input', updateReadout);
+targetLength.addEventListener('input', updateReadout);
+
+function fmtTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = (sec - m * 60).toFixed(1);
+  return m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function handleFile(file) {
+  if (!file.type.startsWith('audio/') && !/\.(mp3|wav|ogg|m4a|aac|flac)$/i.test(file.name)) {
+    statusMsg.textContent = 'Please choose an audio file.';
+    return;
+  }
+  statusMsg.textContent = 'Decoding audio…';
+  fileNameEl.textContent = file.name;
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    audioCtx.decodeAudioData(e.target.result.slice(0), function (buffer) {
+      audioBuffer = buffer;
+      uploadZone.style.display = 'none';
+      editor.classList.add('active');
+      statusMsg.textContent = '';
+      updateReadout();
+    }, function () {
+      statusMsg.textContent = 'Could not decode this file. Try a different audio format.';
+    });
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function getPlanFrames() {
+  if (!audioBuffer) return { frameCount: 0, repeats: 0 };
+  const clipFrames = audioBuffer.length;
+  if (mode === 'count') {
+    const n = Math.max(2, parseInt(repeatCount.value) || 2);
+    return { frameCount: clipFrames * n, repeats: n };
+  } else {
+    const targetSec = Math.max(0.1, parseFloat(targetLength.value) || 1);
+    const targetFrames = Math.round(targetSec * audioBuffer.sampleRate);
+    const repeatsNeeded = Math.ceil(targetFrames / clipFrames);
+    return { frameCount: targetFrames, repeats: repeatsNeeded };
+  }
+}
+
+function updateReadout() {
+  if (!audioBuffer) return;
+  const plan = getPlanFrames();
+  const durSec = plan.frameCount / audioBuffer.sampleRate;
+  resultReadout.innerHTML = 'Original: <strong>' + fmtTime(audioBuffer.duration) + '</strong> → Looped: <strong>' + fmtTime(durSec) + '</strong> (' + plan.repeats + ' repeats)';
+}
+
+function buildLoop() {
+  const plan = getPlanFrames();
+  const numChannels = audioBuffer.numberOfChannels;
+  const out = audioCtx.createBuffer(numChannels, plan.frameCount, audioBuffer.sampleRate);
+  for (let ch = 0; ch < numChannels; ch++) {
+    const srcData = audioBuffer.getChannelData(ch);
+    const outData = out.getChannelData(ch);
+    let written = 0;
+    while (written < plan.frameCount) {
+      const remaining = plan.frameCount - written;
+      const chunkLen = Math.min(srcData.length, remaining);
+      outData.set(srcData.subarray(0, chunkLen), written);
+      written += chunkLen;
+    }
+  }
+  return out;
+}
+
+document.getElementById('previewBtn').addEventListener('click', () => {
+  if (!audioBuffer) return;
+  if (previewSource) { try { previewSource.stop(); } catch (e) {} }
+  previewSource = audioCtx.createBufferSource();
+  previewSource.buffer = audioBuffer;
+  previewSource.loop = true;
+  previewSource.connect(audioCtx.destination);
+  previewSource.start(0);
+  statusMsg.textContent = 'Previewing loop point (playing original on repeat)…';
+  statusMsg.className = 'status-msg';
+  setTimeout(() => {
+    if (previewSource) { try { previewSource.stop(); } catch (e) {} }
+    if (statusMsg.textContent.indexOf('Previewing') === 0) statusMsg.textContent = '';
+  }, 6000);
+});
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  if (!audioBuffer) return;
+  statusMsg.textContent = 'Building loop…';
+  statusMsg.className = 'status-msg';
+  setTimeout(() => {
+    try {
+      const looped = buildLoop();
+      const wavBlob = bufferToWav(looped);
+      const url = URL.createObjectURL(wavBlob);
+      const a = document.createElement('a');
+      const base = (fileNameEl.textContent || 'audio').replace(/\.[^.]+$/, '');
+      a.href = url;
+      a.download = base + '-loop.wav';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+      statusMsg.textContent = '✓ Loop downloaded';
+      statusMsg.className = 'status-msg success';
+    } catch (err) {
+      statusMsg.textContent = 'Something went wrong. Please try again.';
+      statusMsg.className = 'status-msg';
+    }
+  }, 30);
+});
+
+function bufferToWav(abuffer) {
+  const numOfChan = abuffer.numberOfChannels;
+  const length = abuffer.length * numOfChan * 2 + 44;
+  const buffer = new ArrayBuffer(length);
+  const view = new DataView(buffer);
+  const channels = [];
+  let offset = 0, pos = 0;
+  function setUint16(data) { view.setUint16(pos, data, true); pos += 2; }
+  function setUint32(data) { view.setUint32(pos, data, true); pos += 4; }
+  setUint32(0x46464952); setUint32(length - 8); setUint32(0x45564157);
+  setUint32(0x20746d66); setUint32(16); setUint16(1); setUint16(numOfChan);
+  setUint32(abuffer.sampleRate); setUint32(abuffer.sampleRate * 2 * numOfChan);
+  setUint16(numOfChan * 2); setUint16(16);
+  setUint32(0x61746164); setUint32(length - pos - 4);
+  for (let i = 0; i < numOfChan; i++) channels.push(abuffer.getChannelData(i));
+  while (pos < length) {
+    for (let i = 0; i < numOfChan; i++) {
+      let sample = Math.max(-1, Math.min(1, channels[i][offset]));
+      sample = (sample < 0 ? sample * 0x8000 : sample * 0x7FFF) | 0;
+      view.setInt16(pos, sample, true);
+      pos += 2;
+    }
+    offset++;
+  }
+  return new Blob([view], { type: 'audio/wav' });
+}
+</script>
+
+</body>
+</html>

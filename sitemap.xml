@@ -21,6 +21,141 @@
 	<priority>0.9</priority>
 </url>
 <url>
+	<loc>https://audiotoolkit.github.io/audio-merger.html</loc>
+	<lastmod>2026-09-18T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/volume-booster.html</loc>
+	<lastmod>2026-09-18T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/wav-to-mp3.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/mp3-to-wav.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/ogg-to-mp3.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/flac-to-mp3.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/audio-reverser.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/fade-in-out.html</loc>
+	<lastmod>2026-09-19T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/silence-remover.html</loc>
+	<lastmod>2026-09-20T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/speed-changer.html</loc>
+	<lastmod>2026-09-20T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/voice-recorder.html</loc>
+	<lastmod>2026-09-20T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/aac-to-mp3.html</loc>
+	<lastmod>2026-09-21T00:00:00+01:00</lastmod>
+	<priority>0.9</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/ringtone-maker.html</loc>
+	<lastmod>2026-09-21T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/mp3-tag-editor.html</loc>
+	<lastmod>2026-09-21T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/stereo-to-mono.html</loc>
+	<lastmod>2026-09-22T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/loop-maker.html</loc>
+	<lastmod>2026-09-22T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/waveform-image.html</loc>
+	<lastmod>2026-09-22T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/metronome.html</loc>
+	<lastmod>2026-09-23T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/guitar-tuner.html</loc>
+	<lastmod>2026-09-23T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/bpm-detector.html</loc>
+	<lastmod>2026-09-23T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/audio-equalizer.html</loc>
+	<lastmod>2026-09-24T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/text-to-speech.html</loc>
+	<lastmod>2026-09-24T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/vocal-reducer.html</loc>
+	<lastmod>2026-09-24T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/audio-splitter.html</loc>
+	<lastmod>2026-09-25T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/sample-rate-converter.html</loc>
+	<lastmod>2026-09-25T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/white-noise-generator.html</loc>
+	<lastmod>2026-09-25T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://audiotoolkit.github.io/audio-compressor.html</loc>
+	<lastmod>2026-09-26T00:00:00+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
 	<loc>https://audiotoolkit.github.io/about.html</loc>
 	<lastmod>2026-09-18T00:00:00+01:00</lastmod>
 	<priority>0.7</priority>

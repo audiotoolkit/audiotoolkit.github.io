@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guitar Tuner – Free Online, Uses Your Microphone | Audio Toolkit</title>
+  <meta name="description" content="Tune your guitar online, free, using your device's microphone. Real-time pitch detection, works for any instrument — entirely in your browser." />
+  <meta name="keywords" content="guitar tuner online, free tuner, online instrument tuner, chromatic tuner free" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://audiotoolkit.github.io/guitar-tuner.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Audio Toolkit" />
+  <meta property="og:title" content="Guitar Tuner – Free Online, Uses Your Microphone" />
+  <meta property="og:description" content="Tune your guitar online, free, using your device's microphone, entirely in your browser." />
+  <meta property="og:url" content="https://audiotoolkit.github.io/guitar-tuner.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Guitar Tuner – Free Online, Uses Your Microphone" />
+  <meta name="twitter:description" content="Tune your guitar online, free, entirely in your browser." />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Guitar Tuner",
+  "url": "https://audiotoolkit.github.io/guitar-tuner.html",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "description": "Free online chromatic tuner that uses your microphone for real-time pitch detection. Runs entirely in the browser.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this only work for guitar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. This is a chromatic tuner, meaning it detects any pitch and shows the nearest note name, so it works for any instrument \u2014 bass, ukulele, violin, or even voice. The string labels shown are just a convenience for standard guitar tuning." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my audio recorded or sent anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The microphone audio is analyzed in real time directly in your browser to detect pitch, and is never recorded, stored, or sent anywhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't it detecting my note accurately?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Background noise, a very quiet pluck, or multiple strings ringing at once can confuse pitch detection. For best results, tune in a quiet room and pluck one string cleanly, letting it ring for a moment before reading the display." }
+    },
+    {
+      "@type": "Question",
+      "name": "What tuning does this use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard concert pitch, where A4 = 440 Hz. This covers standard guitar tuning (E A D G B E) and works for any other instrument tuned to standard pitch." }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audiotoolkit.github.io/" },
+    { "@type": "ListItem", "position": 2, "name": "Guitar Tuner", "item": "https://audiotoolkit.github.io/guitar-tuner.html" }
+  ]
+}
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669;--red:#DC2626}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--white);color:#1E1B2E;line-height:1.65}
+    nav{position:sticky;top:0;z-index:100;background:rgba(15,12,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,92,246,0.18);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px}
+    .logo{font-size:1.25rem;font-weight:800;color:var(--white);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:26px;list-style:none}
+    .nav-links a{color:#B8B3D1;text-decoration:none;font-size:.9rem;font-weight:500}
+    .nav-links a:hover{color:var(--accent)}
+    @media(max-width:640px){.nav-links{display:none}}
+    .breadcrumb{background:var(--light);border-bottom:1px solid var(--border);padding:10px 5%;font-size:.82rem;color:var(--slate)}
+    .breadcrumb a{color:var(--accent2);text-decoration:none}
+    .hero{background:linear-gradient(135deg,var(--bg) 0%,#241A3D 100%);padding:56px 5% 46px;text-align:center}
+    .hero-badge{display:inline-block;background:rgba(139,92,246,0.14);border:1px solid rgba(139,92,246,0.35);color:#C4B5FD;font-size:.76rem;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:16px}
+    .hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;color:var(--white);letter-spacing:-.5px;margin-bottom:12px}
+    .hero h1 span{color:var(--accent)}
+    .hero p{color:#B8B3D1;font-size:1rem;max-width:560px;margin:0 auto}
+    .tool-wrap{max-width:520px;margin:-24px auto 0;padding:0 5% 40px;position:relative;z-index:2}
+    .tool-box{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 20px 50px rgba(30,20,60,0.14);padding:36px 30px;text-align:center}
+    .note-display{font-size:5rem;font-weight:800;line-height:1;margin-bottom:6px}
+    .freq-display{font-size:.95rem;color:var(--slate);margin-bottom:22px;font-variant-numeric:tabular-nums}
+    .meter{position:relative;height:60px;margin-bottom:26px}
+    .meter-track{position:absolute;top:26px;left:0;right:0;height:6px;background:var(--border);border-radius:4px}
+    .meter-center{position:absolute;top:16px;left:50%;transform:translateX(-1px);width:2px;height:26px;background:var(--border)}
+    .meter-needle{position:absolute;top:8px;left:50%;width:4px;height:44px;background:var(--slate);border-radius:2px;transition:left .08s,background .15s;transform:translateX(-2px)}
+    .meter-needle.in-tune{background:var(--green)}
+    .cents-label{font-size:.8rem;color:var(--slate);margin-bottom:20px}
+    .string-row{display:flex;justify-content:center;gap:6px;margin-bottom:22px;flex-wrap:wrap}
+    .string-chip{padding:6px 10px;border-radius:8px;background:var(--light);border:1px solid var(--border);font-size:.8rem;font-weight:700;color:var(--slate)}
+    .string-chip.active{background:var(--accent);color:white;border-color:var(--accent)}
+    .main-btn{width:100%;padding:16px;border-radius:12px;font-weight:800;font-size:1.05rem;cursor:pointer;border:none;background:var(--accent);color:white}
+    .main-btn:hover{background:var(--accent2)}
+    .main-btn.listening{background:var(--red)}
+    .main-btn.listening:hover{background:#B91C1C}
+    .status-msg{margin-top:14px;font-size:.85rem;text-align:center;color:var(--slate);min-height:20px}
+    .status-msg.error{color:var(--red)}
+    section.content{padding:56px 5%;max-width:820px;margin:0 auto}
+    .section-block{padding:44px 0;border-bottom:1px solid var(--border)}
+    .section-block:last-child{border-bottom:none}
+    .section-label{color:var(--accent2);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .section-block h2{font-size:clamp(1.3rem,3vw,1.7rem);font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+    .section-block p{color:#3F3B52;font-size:.96rem;margin-bottom:13px}
+    .section-block p:last-child{margin-bottom:0}
+    .faq-item{border-bottom:1px solid var(--border);padding:15px 0}
+    .faq-item:last-child{border-bottom:none}
+    .faq-q{font-weight:700;font-size:.96rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-a{color:#3F3B52;font-size:.92rem;margin-top:9px;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-arrow{color:var(--accent);transition:transform .2s}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:8px}
+    .related-card{background:var(--light);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;text-decoration:none;color:#1E1B2E;transition:all .2s;display:flex;flex-direction:column;gap:6px}
+    .related-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .related-card h3{font-size:.92rem;font-weight:700}
+    .related-card p{font-size:.8rem;color:var(--slate);margin:0}
+    footer{background:var(--bg);color:#8781A0;text-align:center;padding:34px 5%}
+    .footer-logo{color:var(--white);font-weight:800;font-size:1.05rem;margin-bottom:12px}
+    .footer-logo span{color:var(--accent)}
+    .footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+    .footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
+    footer p{font-size:.8rem}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
+  <ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+</nav>
+<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Guitar Tuner</div>
+
+<section class="hero">
+  <div class="hero-badge">Free · Private · No Signup</div>
+  <h1>Guitar Tuner <span>Online, Free</span></h1>
+  <p>Real-time pitch detection using your microphone. Works for guitar, bass, ukulele, or any instrument.</p>
+</section>
+
+<div class="tool-wrap">
+  <div class="tool-box">
+
+    <div class="note-display" id="noteDisplay">—</div>
+    <div class="freq-display" id="freqDisplay">Press start and play a note</div>
+
+    <div class="meter">
+      <div class="meter-track"></div>
+      <div class="meter-center"></div>
+      <div class="meter-needle" id="meterNeedle" style="left:50%"></div>
+    </div>
+    <div class="cents-label" id="centsLabel">&nbsp;</div>
+
+    <div class="string-row">
+      <div class="string-chip" id="chipE2">E2</div>
+      <div class="string-chip" id="chipA2">A2</div>
+      <div class="string-chip" id="chipD3">D3</div>
+      <div class="string-chip" id="chipG3">G3</div>
+      <div class="string-chip" id="chipB3">B3</div>
+      <div class="string-chip" id="chipE4">E4</div>
+    </div>
+
+    <button class="main-btn" id="startBtn">🎤 Start Tuner</button>
+    <div class="status-msg" id="statusMsg"></div>
+  </div>
+</div>
+
+<section class="content">
+
+  <div class="section-block">
+    <div class="section-label">How It Works</div>
+    <h2>How to Tune Your Guitar</h2>
+    <p><strong>1. Click "Start Tuner"</strong> and allow microphone access when prompted.</p>
+    <p><strong>2. Pluck one string</strong> and let it ring clearly, away from background noise.</p>
+    <p><strong>3. Watch the needle.</strong> It centers and turns green when you're in tune; drift left means flat (tune up), drift right means sharp (tune down).</p>
+    <p><strong>4. Repeat for each string.</strong> The six chips show standard guitar tuning (E2 A2 D3 G3 B3 E4) and highlight the closest match.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Why It Matters</div>
+    <h2>How Pitch Detection Works</h2>
+    <p>This tuner uses an autocorrelation algorithm — it compares the incoming audio waveform against slightly delayed copies of itself to find the repeating pattern that reveals the fundamental frequency. This is a standard, well-established technique for detecting the pitch of a single sustained note, and it runs entirely in your browser without any audio being recorded or sent anywhere.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Good To Know</div>
+    <h2>Getting an Accurate Reading</h2>
+    <p><strong>Mute other strings.</strong> Sympathetic ringing from nearby strings can confuse the pitch detector — lightly rest your other fingers on unused strings if needed.</p>
+    <p><strong>Tune in a quiet space.</strong> Background noise, music, or conversation can interfere with an accurate reading.</p>
+    <p><strong>Works for any instrument.</strong> This is a chromatic tuner under the hood — the string labels are just a shortcut for standard guitar tuning, but any note you play will be detected and named correctly.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does this only work for guitar? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">No. This is a chromatic tuner, meaning it detects any pitch and shows the nearest note name, so it works for any instrument — bass, ukulele, violin, or even voice. The string labels shown are just a convenience for standard guitar tuning.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my audio recorded or sent anywhere?</div>
+      <div class="faq-a">No. The microphone audio is analyzed in real time directly in your browser to detect pitch, and is never recorded, stored, or sent anywhere.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why isn't it detecting my note accurately?</div>
+      <div class="faq-a">Background noise, a very quiet pluck, or multiple strings ringing at once can confuse pitch detection. For best results, tune in a quiet room and pluck one string cleanly, letting it ring for a moment before reading the display.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What tuning does this use?</div>
+      <div class="faq-a">Standard concert pitch, where A4 = 440 Hz. This covers standard guitar tuning (E A D G B E) and works for any other instrument tuned to standard pitch.</div>
+    </div>
+  </div>
+
+  <div class="section-block">
+    <div class="section-label">More Tools</div>
+    <h2>Related Tools</h2>
+    <div class="related-grid">
+      <a href="metronome.html" class="related-card"><h3>Metronome</h3><p>Free precise online metronome</p></a>
+      <a href="voice-recorder.html" class="related-card"><h3>Voice Recorder</h3><p>Record from your microphone</p></a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-logo">Audio <span>Toolkit</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p>© 2026 Audio Toolkit. All rights reserved.</p>
+</footer>
+
+<script>
+let audioCtx = null;
+let analyser = null;
+let mediaStream = null;
+let listening = false;
+let rafId = null;
+let dataArray = null;
+
+const noteDisplay = document.getElementById('noteDisplay');
+const freqDisplay = document.getElementById('freqDisplay');
+const meterNeedle = document.getElementById('meterNeedle');
+const centsLabel = document.getElementById('centsLabel');
+const startBtn = document.getElementById('startBtn');
+const statusMsg = document.getElementById('statusMsg');
+
+const NOTE_NAMES = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+const GUITAR_STRINGS = { E2: 82.41, A2: 110.00, D3: 146.83, G3: 196.00, B3: 246.94, E4: 329.63 };
+
+function freqToNote(freq) {
+  const noteNum = 12 * (Math.log(freq / 440) / Math.log(2));
+  const rounded = Math.round(noteNum) + 69; // MIDI number, A4=69
+  const name = NOTE_NAMES[rounded % 12];
+  const octave = Math.floor(rounded / 12) - 1;
+  const exactFreq = 440 * Math.pow(2, (rounded - 69) / 12);
+  const cents = 1200 * Math.log(freq / exactFreq) / Math.log(2);
+  return { name: name + octave, cents };
+}
+
+function highlightClosestString(freq) {
+  let closest = null, minDiff = Infinity;
+  for (const [key, sFreq] of Object.entries(GUITAR_STRINGS)) {
+    const diff = Math.abs(freq - sFreq);
+    if (diff < minDiff) { minDiff = diff; closest = key; }
+  }
+  document.querySelectorAll('.string-chip').forEach(chip => chip.classList.remove('active'));
+  if (closest && minDiff < 30) {
+    const el = document.getElementById('chip' + closest);
+    if (el) el.classList.add('active');
+  }
+}
+
+function autoCorrelate(buf, sampleRate) {
+  const SIZE = buf.length;
+  let rms = 0;
+  for (let i = 0; i < SIZE; i++) rms += buf[i] * buf[i];
+  rms = Math.sqrt(rms / SIZE);
+  if (rms < 0.01) return -1;
+
+  let r1 = 0, r2 = SIZE - 1;
+  const thres = 0.2;
+  for (let i = 0; i < SIZE / 2; i++) { if (Math.abs(buf[i]) < thres) { r1 = i; break; } }
+  for (let i = 1; i < SIZE / 2; i++) { if (Math.abs(buf[SIZE - i]) < thres) { r2 = SIZE - i; break; } }
+  const buf2 = buf.slice(r1, r2);
+  const newSize = buf2.length;
+  if (newSize < 2) return -1;
+
+  const c = new Array(newSize).fill(0);
+  for (let i = 0; i < newSize; i++) {
+    for (let j = 0; j < newSize - i; j++) {
+      c[i] += buf2[j] * buf2[j + i];
+    }
+  }
+  let d = 0;
+  while (d < newSize - 1 && c[d] > c[d + 1]) d++;
+  let maxval = -1, maxpos = -1;
+  for (let i = d; i < newSize; i++) {
+    if (c[i] > maxval) { maxval = c[i]; maxpos = i; }
+  }
+  let T0 = maxpos;
+  if (T0 <= 0 || T0 >= newSize - 1) return -1;
+  const x1 = c[T0 - 1], x2 = c[T0], x3 = c[T0 + 1];
+  const a = (x1 + x3 - 2 * x2) / 2;
+  const b = (x3 - x1) / 2;
+  if (a) T0 = T0 - b / (2 * a);
+  return sampleRate / T0;
+}
+
+function updateDisplay(freq) {
+  if (freq < 60 || freq > 1200) {
+    noteDisplay.textContent = '—';
+    freqDisplay.textContent = 'Listening…';
+    meterNeedle.style.left = '50%';
+    meterNeedle.classList.remove('in-tune');
+    centsLabel.innerHTML = '&nbsp;';
+    return;
+  }
+  const { name, cents } = freqToNote(freq);
+  noteDisplay.textContent = name;
+  freqDisplay.textContent = freq.toFixed(1) + ' Hz';
+  const clamped = Math.max(-50, Math.min(50, cents));
+  const pct = 50 + clamped;
+  meterNeedle.style.left = pct + '%';
+  const inTune = Math.abs(cents) < 5;
+  meterNeedle.classList.toggle('in-tune', inTune);
+  centsLabel.textContent = inTune ? '✓ In tune' : (cents > 0 ? '+' + cents.toFixed(0) + ' cents (sharp)' : cents.toFixed(0) + ' cents (flat)');
+  highlightClosestString(freq);
+}
+
+function tick() {
+  if (!listening) return;
+  analyser.getFloatTimeDomainData(dataArray);
+  const freq = autoCorrelate(dataArray, audioCtx.sampleRate);
+  if (freq > 0) updateDisplay(freq);
+  else {
+    noteDisplay.textContent = '—';
+    freqDisplay.textContent = 'Listening…';
+  }
+  rafId = requestAnimationFrame(tick);
+}
+
+startBtn.addEventListener('click', async () => {
+  if (listening) {
+    stopTuner();
+    return;
+  }
+  statusMsg.textContent = '';
+  statusMsg.className = 'status-msg';
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    statusMsg.textContent = 'Your browser does not support microphone access.';
+    statusMsg.className = 'status-msg error';
+    return;
+  }
+  try {
+    mediaStream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+  } catch (err) {
+    statusMsg.textContent = 'Microphone access was denied or unavailable.';
+    statusMsg.className = 'status-msg error';
+    return;
+  }
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioCtx.createMediaStreamSource(mediaStream);
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 2048;
+  dataArray = new Float32Array(analyser.fftSize);
+  source.connect(analyser);
+
+  listening = true;
+  startBtn.textContent = '■ Stop Tuner';
+  startBtn.classList.add('listening');
+  tick();
+});
+
+function stopTuner() {
+  listening = false;
+  if (rafId) cancelAnimationFrame(rafId);
+  if (mediaStream) mediaStream.getTracks().forEach(t => t.stop());
+  startBtn.textContent = '🎤 Start Tuner';
+  startBtn.classList.remove('listening');
+  noteDisplay.textContent = '—';
+  freqDisplay.textContent = 'Press start and play a note';
+  meterNeedle.style.left = '50%';
+  meterNeedle.classList.remove('in-tune');
+  centsLabel.innerHTML = '&nbsp;';
+  document.querySelectorAll('.string-chip').forEach(chip => chip.classList.remove('active'));
+}
+</script>
+
+</body>
+</html>

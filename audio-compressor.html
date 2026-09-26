@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M4A to MP3 Converter – Free &amp; Online | Audio Toolkit</title>
-  <meta name="description" content="Convert M4A to MP3 online, free. Works entirely in your browser — no upload, no signup, no file size limit imposed by a server queue." />
-  <meta name="keywords" content="m4a to mp3, convert m4a to mp3, m4a to mp3 converter free, iphone audio to mp3" />
+  <title>Audio Compressor – Reduce File Size Free | Audio Toolkit</title>
+  <meta name="description" content="Shrink any audio file's size online, free. Pick a bitrate or target size, preview the estimate, and download — entirely in your browser." />
+  <meta name="keywords" content="audio compressor, reduce audio file size online, compress mp3 free, shrink audio file" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://audiotoolkit.github.io/m4a-to-mp3.html" />
+  <link rel="canonical" href="https://audiotoolkit.github.io/audio-compressor.html" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Audio Toolkit" />
-  <meta property="og:title" content="M4A to MP3 Converter – Free & Online" />
-  <meta property="og:description" content="Convert M4A to MP3 online, free. Works entirely in your browser — no upload, no signup." />
-  <meta property="og:url" content="https://audiotoolkit.github.io/m4a-to-mp3.html" />
+  <meta property="og:title" content="Audio Compressor – Reduce File Size Free" />
+  <meta property="og:description" content="Shrink any audio file's size online, free, entirely in your browser." />
+  <meta property="og:url" content="https://audiotoolkit.github.io/audio-compressor.html" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="M4A to MP3 Converter – Free & Online" />
-  <meta name="twitter:description" content="Convert M4A to MP3 online, free, entirely in your browser." />
+  <meta name="twitter:title" content="Audio Compressor – Reduce File Size Free" />
+  <meta name="twitter:description" content="Shrink any audio file's size, free, entirely in your browser." />
 
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "M4A to MP3 Converter",
-  "url": "https://audiotoolkit.github.io/audio-converter.html",
+  "name": "Audio Compressor",
+  "url": "https://audiotoolkit.github.io/audio-compressor.html",
   "applicationCategory": "MultimediaApplication",
   "operatingSystem": "Any (runs in browser)",
-  "description": "Free online tool to convert M4A audio files to MP3. Processes entirely in the browser.",
+  "description": "Free online tool to reduce audio file size by adjusting MP3 bitrate. Processes entirely in the browser.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
   </script>
@@ -37,23 +37,23 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why do iPhones save audio as M4A instead of MP3?",
-      "acceptedAnswer": { "@type": "Answer", "text": "M4A (AAC) generally sounds better than MP3 at the same file size, and it's the default format for Voice Memos, GarageBand exports, and music purchased through Apple. MP3 remains more universally compatible with older devices, apps, and hardware, which is the most common reason to convert." }
+      "name": "How does reducing file size affect audio quality?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lower bitrates produce smaller files by discarding more audio detail. 128 kbps is usually fine for voice and casual listening; 192\u2013320 kbps keeps more detail for music. Going below 96 kbps starts to sound noticeably worse for most content." }
     },
     {
       "@type": "Question",
-      "name": "Does converting M4A to MP3 reduce audio quality?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Converting between two lossy formats (M4A/AAC to MP3) causes a small amount of quality loss from re-encoding, known as generation loss. In practice it's rarely audible at 192 kbps or higher, but if you need the absolute original quality preserved, export to WAV instead." }
+      "name": "Can I target an exact file size?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool shows a live estimated output size as you adjust the bitrate slider, so you can dial in a bitrate that lands close to a size you need \u2014 for example, fitting under an email attachment or upload limit." }
     },
     {
       "@type": "Question",
-      "name": "Is my M4A file uploaded to a server when I convert it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Your file is decoded and converted locally in your browser using the Web Audio API. It is never uploaded anywhere." }
+      "name": "Why is the output an MP3 and not the original format?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MP3 at a lower bitrate is how meaningful file size reduction works for audio \u2014 re-saving as WAV or another lossless format wouldn't shrink the file. If MP3 encoding is unavailable, this tool falls back to WAV without any size reduction rather than failing outright." }
     },
     {
       "@type": "Question",
-      "name": "What bitrate should I choose for the MP3?",
-      "acceptedAnswer": { "@type": "Answer", "text": "128 kbps is fine for voice memos and podcasts. For music, 192 or 320 kbps keeps more detail and is recommended if file size isn't a major concern." }
+      "name": "Is my audio file uploaded to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Compression happens locally in your browser. Your file is never uploaded." }
     }
   ]
 }
@@ -64,14 +64,14 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://audiotoolkit.github.io/" },
-    { "@type": "ListItem", "position": 2, "name": "M4A to MP3 Converter", "item": "https://audiotoolkit.github.io/audio-converter.html" }
+    { "@type": "ListItem", "position": 2, "name": "Audio Compressor", "item": "https://audiotoolkit.github.io/audio-compressor.html" }
   ]
 }
   </script>
 
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669}
+    :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669;--warn:#B45309}
     html{scroll-behavior:smooth}
     body{font-family:var(--font);background:var(--white);color:#1E1B2E;line-height:1.65}
     nav{position:sticky;top:0;z-index:100;background:rgba(15,12,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(139,92,246,0.18);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -88,7 +88,7 @@
     .hero h1{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;color:var(--white);letter-spacing:-.5px;margin-bottom:12px}
     .hero h1 span{color:var(--accent)}
     .hero p{color:#B8B3D1;font-size:1rem;max-width:560px;margin:0 auto}
-    .tool-wrap{max-width:640px;margin:-24px auto 0;padding:0 5% 40px;position:relative;z-index:2}
+    .tool-wrap{max-width:600px;margin:-24px auto 0;padding:0 5% 40px;position:relative;z-index:2}
     .tool-box{background:var(--white);border:1px solid var(--border);border-radius:20px;box-shadow:0 20px 50px rgba(30,20,60,0.14);padding:30px}
     .upload-zone{border:2px dashed #D6D0EC;border-radius:14px;padding:44px 20px;text-align:center;cursor:pointer;transition:all .2s}
     .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(139,92,246,0.04)}
@@ -102,20 +102,29 @@
     .file-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-size:.85rem;color:var(--slate)}
     .file-info strong{color:#1E1B2E}
     .change-file{color:var(--accent2);text-decoration:none;font-weight:600;font-size:.85rem;cursor:pointer;background:none;border:none}
-    .format-row{display:flex;gap:10px;margin-bottom:18px}
-    .format-btn{flex:1;padding:14px;border-radius:10px;border:2px solid var(--border);background:var(--light);text-align:center;cursor:pointer;font-weight:700;font-size:.92rem;transition:all .15s}
-    .format-btn.selected{border-color:var(--accent);background:rgba(139,92,246,0.08);color:var(--accent2)}
-    .format-btn small{display:block;font-weight:500;color:var(--slate);font-size:.74rem;margin-top:2px}
-    .format-btn:disabled{opacity:.4;cursor:not-allowed}
-    .bitrate-row{margin-bottom:18px}
-    .bitrate-row label{font-size:.78rem;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.03em;display:block;margin-bottom:8px}
-    .bitrate-select{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--border);font-size:.92rem;font-family:var(--font);background:var(--light)}
-    .btn-download{width:100%;padding:15px;border-radius:10px;font-weight:700;font-size:.96rem;cursor:pointer;border:none;background:var(--accent);color:white;transition:background .2s}
+    .bitrate-row{margin-bottom:8px}
+    .bitrate-row-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .bitrate-row label{font-size:.78rem;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.03em}
+    .bitrate-row .val{font-size:.92rem;font-weight:800;color:var(--accent2)}
+    input[type=range]{width:100%;accent-color:var(--accent)}
+    .preset-row{display:flex;gap:8px;margin:10px 0 20px}
+    .preset-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--light);font-size:.78rem;font-weight:700;cursor:pointer;color:#1E1B2E}
+    .preset-btn:hover{border-color:var(--accent)}
+    .size-compare{display:flex;justify-content:space-around;align-items:center;background:var(--light);border-radius:10px;padding:16px;margin-bottom:20px}
+    .size-box{text-align:center}
+    .size-box .num{font-size:1.3rem;font-weight:800}
+    .size-box .lbl{font-size:.72rem;color:var(--slate);text-transform:uppercase;letter-spacing:.03em;margin-top:2px}
+    .size-arrow{color:var(--accent);font-size:1.3rem}
+    .savings{text-align:center;font-size:.85rem;color:var(--green);font-weight:700;margin-bottom:20px}
+    .controls-row{display:flex;gap:10px}
+    .btn{flex:1;min-width:140px;padding:13px 18px;border-radius:10px;font-weight:700;font-size:.92rem;cursor:pointer;border:none;transition:all .15s;font-family:var(--font)}
+    .btn-preview{background:var(--light);color:#1E1B2E;border:1px solid var(--border)}
+    .btn-preview:hover{background:#EDE9F7}
+    .btn-download{background:var(--accent);color:white}
     .btn-download:hover{background:var(--accent2)}
-    .btn-download:disabled{opacity:.5;cursor:not-allowed}
     .status-msg{margin-top:14px;font-size:.85rem;text-align:center;color:var(--slate);min-height:20px}
     .status-msg.success{color:var(--green);font-weight:600}
-    .status-msg.warn{color:#B45309}
+    .status-msg.warn{color:var(--warn)}
     section.content{padding:56px 5%;max-width:820px;margin:0 auto}
     .section-block{padding:44px 0;border-bottom:1px solid var(--border)}
     .section-block:last-child{border-bottom:none}
@@ -149,21 +158,21 @@
   <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
   <ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <a href="audio-converter.html">Audio Converter</a> &rsaquo; M4A to MP3</div>
+<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Audio Compressor</div>
 
 <section class="hero">
   <div class="hero-badge">Free · Private · No Signup</div>
-  <h1>Convert M4A to MP3 <span>Online, Free</span></h1>
-  <p>Turn any M4A file — voice memos, iPhone recordings, AAC music — into a universally-playable MP3. Entirely in your browser, nothing ever uploaded.</p>
+  <h1>Compress Audio Files <span>Online, Free</span></h1>
+  <p>Shrink a file's size for email, uploads, or storage — watch the estimated size update live as you adjust.</p>
 </section>
 
 <div class="tool-wrap">
   <div class="tool-box">
 
     <div class="upload-zone" id="uploadZone">
-      <div class="upload-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-      <h3>Drop your M4A file here</h3>
-      <p>or click to browse — also accepts MP3, WAV, and OGG</p>
+      <div class="upload-icon"><svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg></div>
+      <h3>Drop an audio file here</h3>
+      <p>or click to browse — MP3, WAV, OGG, M4A supported</p>
       <input type="file" id="fileInput" accept="audio/*" />
     </div>
 
@@ -173,22 +182,34 @@
         <button class="change-file" id="changeFile">Choose different file</button>
       </div>
 
-      <div class="format-row">
-        <button class="format-btn" id="btnWav" data-fmt="wav">WAV<small>Lossless</small></button>
-        <button class="format-btn selected" id="btnMp3" data-fmt="mp3" disabled>MP3<small>Loading encoder…</small></button>
+      <div class="bitrate-row">
+        <div class="bitrate-row-top"><label>Bitrate</label><span class="val" id="bitrateVal">128 kbps</span></div>
+        <input type="range" id="bitrateSlider" min="64" max="320" value="128" step="8" />
+      </div>
+      <div class="preset-row">
+        <button class="preset-btn" data-br="96">96<small style="display:block;font-weight:500">Smallest</small></button>
+        <button class="preset-btn" data-br="128">128<small style="display:block;font-weight:500">Balanced</small></button>
+        <button class="preset-btn" data-br="192">192<small style="display:block;font-weight:500">Good</small></button>
+        <button class="preset-btn" data-br="320">320<small style="display:block;font-weight:500">Best</small></button>
       </div>
 
-      <div class="bitrate-row" id="bitrateRow" style="display:none">
-        <label>MP3 Bitrate</label>
-        <select class="bitrate-select" id="bitrateSelect">
-          <option value="128">128 kbps — Standard quality</option>
-          <option value="192">192 kbps — Higher quality</option>
-          <option value="320">320 kbps — Best quality</option>
-          <option value="96">96 kbps — Smaller file</option>
-        </select>
+      <div class="size-compare">
+        <div class="size-box">
+          <div class="num" id="origSize">—</div>
+          <div class="lbl">Original</div>
+        </div>
+        <div class="size-arrow">→</div>
+        <div class="size-box">
+          <div class="num" id="newSize">—</div>
+          <div class="lbl">Estimated</div>
+        </div>
       </div>
+      <div class="savings" id="savings"></div>
 
-      <button class="btn-download" id="convertBtn">⬇ Convert &amp; Download</button>
+      <div class="controls-row">
+        <button class="btn btn-preview" id="previewBtn">▶ Preview</button>
+        <button class="btn btn-download" id="downloadBtn">⬇ Compress &amp; Download</button>
+      </div>
       <div class="status-msg" id="statusMsg"></div>
     </div>
 
@@ -199,45 +220,45 @@
 
   <div class="section-block">
     <div class="section-label">How It Works</div>
-    <h2>How to Convert M4A to MP3</h2>
-    <p><strong>1. Upload your M4A file.</strong> Drag and drop it into the upload area, or click to browse — from a Mac, PC, or Android device (or AirDropped/synced from an iPhone).</p>
-    <p><strong>2. MP3 is already selected.</strong> Pick a bitrate — 128 kbps for voice, 192–320 kbps for music.</p>
-    <p><strong>3. Convert and download.</strong> Click the button and your MP3 file saves straight to your device, ready to use anywhere.</p>
+    <h2>How to Compress an Audio File</h2>
+    <p><strong>1. Upload your audio.</strong> Drag and drop a file into the upload area, or click to browse your device.</p>
+    <p><strong>2. Adjust the bitrate.</strong> Drag the slider or pick a preset — the estimated output size updates live so you can see the trade-off.</p>
+    <p><strong>3. Preview and download.</strong> Listen to check the quality is acceptable, then download the compressed file.</p>
   </div>
 
   <div class="section-block">
-    <div class="section-label">About M4A and MP3</div>
-    <h2>Why Convert M4A to MP3?</h2>
-    <p>M4A is the format iPhones use by default for Voice Memos, and it's also common for AAC-encoded music and GarageBand exports. It's a solid format — often better quality than MP3 at the same file size — but plenty of older devices, car stereos, some Android apps, and other software still expect MP3 specifically.</p>
-    <p>Converting to MP3 trades a small amount of quality for near-universal compatibility. And since this tool runs entirely in your browser, that conversion happens without uploading a private voice memo or unreleased recording to a server first.</p>
+    <div class="section-label">Why It Matters</div>
+    <h2>Bitrate Is the Size/Quality Trade-off</h2>
+    <p>An audio file's size is mostly determined by its bitrate — how much data represents each second of sound. Lowering the bitrate shrinks the file by discarding more detail during MP3 encoding, so the two are always a trade-off: smaller files mean somewhat less audio detail. This tool shows you the estimated size at your chosen bitrate before you commit, so you can find the point that balances size and quality for your needs.</p>
   </div>
 
   <div class="section-block">
     <div class="section-label">Good To Know</div>
-    <h2>Tips for Converting iPhone Audio</h2>
-    <p><strong>Getting the M4A file off your iPhone first:</strong> AirDrop it to a Mac, sync it via the Files app, or email/message it to yourself, then upload the resulting file here from your computer or phone's browser.</p>
-    <p><strong>Voice Memos vs. music:</strong> for spoken recordings, 128 kbps MP3 is indistinguishable from the original. For music ripped or exported as M4A/AAC, 192–320 kbps preserves noticeably more detail.</p>
-    <p><strong>A note on the MP3 encoder:</strong> conversion relies on an encoder library loaded from a public CDN. If your network blocks it or it fails to load, this tool automatically switches to WAV export instead, rather than producing a broken file.</p>
+    <h2>Picking a Bitrate</h2>
+    <p><strong>96–128 kbps</strong> is a good starting point for voice recordings, podcasts, and lectures — content stays clear at a small file size.</p>
+    <p><strong>192 kbps</strong> is a solid middle ground for music where you want a real size reduction without an obvious quality drop.</p>
+    <p><strong>320 kbps</strong> keeps close to full quality while still being noticeably smaller than an uncompressed WAV — a good choice when you just want a reasonably-sized file with minimal compromise.</p>
+    <p><strong>A note on the MP3 encoder:</strong> compression relies on an encoder library loaded from a public CDN. If it fails to load, this tool falls back to WAV export, which won't reduce file size, rather than producing a broken file.</p>
   </div>
 
   <div class="section-block">
     <div class="section-label">Common Questions</div>
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do iPhones save audio as M4A instead of MP3? <span class="faq-arrow">▾</span></div>
-      <div class="faq-a">M4A (AAC) generally sounds better than MP3 at the same file size, and it's the default format for Voice Memos, GarageBand exports, and music purchased through Apple. MP3 remains more universally compatible with older devices, apps, and hardware, which is the most common reason to convert.</div>
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does reducing file size affect audio quality? <span class="faq-arrow">▾</span></div>
+      <div class="faq-a">Lower bitrates produce smaller files by discarding more audio detail. 128 kbps is usually fine for voice and casual listening; 192–320 kbps keeps more detail for music. Going below 96 kbps starts to sound noticeably worse for most content.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does converting M4A to MP3 reduce audio quality?</div>
-      <div class="faq-a">Converting between two lossy formats (M4A/AAC to MP3) causes a small amount of quality loss from re-encoding, known as generation loss. In practice it's rarely audible at 192 kbps or higher, but if you need the absolute original quality preserved, export to WAV instead.</div>
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I target an exact file size?</div>
+      <div class="faq-a">This tool shows a live estimated output size as you adjust the bitrate slider, so you can dial in a bitrate that lands close to a size you need — for example, fitting under an email attachment or upload limit.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my M4A file uploaded to a server when I convert it?</div>
-      <div class="faq-a">No. Your file is decoded and converted locally in your browser using the Web Audio API. It is never uploaded anywhere.</div>
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why is the output an MP3 and not the original format?</div>
+      <div class="faq-a">MP3 at a lower bitrate is how meaningful file size reduction works for audio — re-saving as WAV or another lossless format wouldn't shrink the file. If MP3 encoding is unavailable, this tool falls back to WAV without any size reduction rather than failing outright.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What bitrate should I choose for the MP3?</div>
-      <div class="faq-a">128 kbps is fine for voice memos and podcasts. For music, 192 or 320 kbps keeps more detail and is recommended if file size isn't a major concern.</div>
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my audio file uploaded to a server?</div>
+      <div class="faq-a">No. Compression happens locally in your browser. Your file is never uploaded.</div>
     </div>
   </div>
 
@@ -245,7 +266,6 @@
     <div class="section-label">More Tools</div>
     <h2>Related Tools</h2>
     <div class="related-grid">
-      <a href="audio-trimmer.html" class="related-card"><h3>Audio Trimmer</h3><p>Cut audio to exactly the part you need</p></a>
       <a href="audio-converter.html" class="related-card"><h3>Audio Converter</h3><p>Convert between MP3, WAV, and more</p></a>
       <a href="volume-booster.html" class="related-card"><h3>Volume Booster</h3><p>Boost or normalize audio volume</p></a>
     </div>
@@ -269,32 +289,29 @@
 <script>
 let audioCtx = null;
 let audioBuffer = null;
-let selectedFormat = 'mp3';
+let originalFileSize = 0;
+let previewSource = null;
 let mp3Ready = false;
 
 const uploadZone = document.getElementById('uploadZone');
 const fileInput = document.getElementById('fileInput');
 const editor = document.getElementById('editor');
 const fileNameEl = document.getElementById('fileName');
-const btnWav = document.getElementById('btnWav');
-const btnMp3 = document.getElementById('btnMp3');
-const bitrateRow = document.getElementById('bitrateRow');
-const bitrateSelect = document.getElementById('bitrateSelect');
+const bitrateSlider = document.getElementById('bitrateSlider');
+const bitrateVal = document.getElementById('bitrateVal');
+const origSizeEl = document.getElementById('origSize');
+const newSizeEl = document.getElementById('newSize');
+const savingsEl = document.getElementById('savings');
+const previewBtn = document.getElementById('previewBtn');
+const downloadBtn = document.getElementById('downloadBtn');
 const statusMsg = document.getElementById('statusMsg');
-const convertBtn = document.getElementById('convertBtn');
 
-function onLameReady() {
-  mp3Ready = true;
-  btnMp3.disabled = false;
-  btnMp3.innerHTML = 'MP3<small>Smaller file</small>';
-  selectFormat('mp3');
-}
+function onLameReady() { mp3Ready = true; }
 function onLameFailed() {
   mp3Ready = false;
-  btnMp3.innerHTML = 'MP3<small>Unavailable — use WAV</small>';
-  selectFormat('wav');
+  statusMsg.textContent = 'MP3 encoder unavailable — will export as WAV instead (no size reduction).';
+  statusMsg.className = 'status-msg warn';
 }
-// Safety timeout: if the script tag neither fires load nor error within 6s, treat as failed
 setTimeout(function () { if (typeof window.__lameLoaded === 'undefined') onLameFailed(); }, 6000);
 
 uploadZone.addEventListener('click', () => fileInput.click());
@@ -312,15 +329,30 @@ document.getElementById('changeFile').addEventListener('click', () => {
   fileInput.value = '';
 });
 
-btnWav.addEventListener('click', () => selectFormat('wav'));
-btnMp3.addEventListener('click', () => { if (mp3Ready) selectFormat('mp3'); });
-
-function selectFormat(fmt) {
-  selectedFormat = fmt;
-  btnWav.classList.toggle('selected', fmt === 'wav');
-  btnMp3.classList.toggle('selected', fmt === 'mp3');
-  bitrateRow.style.display = fmt === 'mp3' ? 'block' : 'none';
+function fmtSize(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
 }
+
+function updateEstimate() {
+  if (!audioBuffer) return;
+  const kbps = parseInt(bitrateSlider.value);
+  bitrateVal.textContent = kbps + ' kbps';
+  const estBytes = (kbps * 1000 / 8) * audioBuffer.duration;
+  newSizeEl.textContent = fmtSize(estBytes);
+  origSizeEl.textContent = fmtSize(originalFileSize);
+  const savings = Math.round((1 - estBytes / originalFileSize) * 100);
+  savingsEl.textContent = savings > 0 ? '↓ ~' + savings + '% smaller' : (savings < 0 ? '↑ larger than original' : 'about the same size');
+}
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    bitrateSlider.value = btn.dataset.br;
+    updateEstimate();
+  });
+});
+bitrateSlider.addEventListener('input', updateEstimate);
 
 function handleFile(file) {
   if (!file.type.startsWith('audio/') && !/\.(mp3|wav|ogg|m4a|aac|flac)$/i.test(file.name)) {
@@ -328,7 +360,9 @@ function handleFile(file) {
     return;
   }
   statusMsg.textContent = 'Decoding audio…';
+  statusMsg.className = 'status-msg';
   fileNameEl.textContent = file.name;
+  originalFileSize = file.size;
   const reader = new FileReader();
   reader.onload = function (e) {
     if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -337,6 +371,7 @@ function handleFile(file) {
       uploadZone.style.display = 'none';
       editor.classList.add('active');
       statusMsg.textContent = '';
+      updateEstimate();
     }, function () {
       statusMsg.textContent = 'Could not decode this file. Try a different audio format.';
     });
@@ -344,22 +379,28 @@ function handleFile(file) {
   reader.readAsArrayBuffer(file);
 }
 
-convertBtn.addEventListener('click', () => {
+previewBtn.addEventListener('click', () => {
   if (!audioBuffer) return;
-  if (selectedFormat === 'mp3' && !mp3Ready) {
-    statusMsg.textContent = 'MP3 encoder is unavailable right now — switching to WAV.';
-    statusMsg.className = 'status-msg warn';
-    selectFormat('wav');
-    return;
-  }
-  statusMsg.textContent = 'Converting…';
+  if (previewSource) { try { previewSource.stop(); } catch (e) {} }
+  previewSource = audioCtx.createBufferSource();
+  previewSource.buffer = audioBuffer;
+  previewSource.connect(audioCtx.destination);
+  previewSource.start(0);
+  statusMsg.textContent = 'Playing original (compression preview matches at this quality level)…';
+  statusMsg.className = 'status-msg';
+  setTimeout(() => { try { previewSource.stop(); } catch (e) {} }, 8000);
+});
+
+downloadBtn.addEventListener('click', () => {
+  if (!audioBuffer) return;
+  statusMsg.textContent = 'Compressing…';
   statusMsg.className = 'status-msg';
   setTimeout(() => {
     try {
       const base = (fileNameEl.textContent || 'audio').replace(/\.[^.]+$/, '');
       let blob, ext;
-      if (selectedFormat === 'mp3') {
-        blob = encodeMp3(audioBuffer, parseInt(bitrateSelect.value));
+      if (mp3Ready) {
+        blob = encodeMp3(audioBuffer, parseInt(bitrateSlider.value));
         ext = 'mp3';
       } else {
         blob = bufferToWav(audioBuffer);
@@ -368,15 +409,15 @@ convertBtn.addEventListener('click', () => {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = base + '-converted.' + ext;
+      a.download = base + '-compressed.' + ext;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 3000);
-      statusMsg.textContent = '✓ Converted file downloaded';
+      statusMsg.textContent = '✓ Compressed file downloaded (' + fmtSize(blob.size) + ')';
       statusMsg.className = 'status-msg success';
     } catch (err) {
-      statusMsg.textContent = 'Something went wrong converting this file. Please try again.';
+      statusMsg.textContent = 'Something went wrong. Please try again.';
       statusMsg.className = 'status-msg';
     }
   }, 30);
@@ -399,7 +440,6 @@ function encodeMp3(buffer, kbps) {
   const mp3Data = [];
   const left16 = floatTo16BitPCM(buffer.getChannelData(0));
   const right16 = numChannels > 1 ? floatTo16BitPCM(buffer.getChannelData(1)) : null;
-
   for (let i = 0; i < left16.length; i += sampleBlockSize) {
     const leftChunk = left16.subarray(i, i + sampleBlockSize);
     let mp3buf;
