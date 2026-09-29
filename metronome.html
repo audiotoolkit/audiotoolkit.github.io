@@ -1,24 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Metronome – Free, No Download | Audio Toolkit</title>
-  <meta name="description" content="A free, precise online metronome. Adjustable BPM and time signature, tap tempo, works right in your browser — no download, no signup." />
-  <meta name="keywords" content="online metronome, free metronome, metronome app, tap tempo" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://audiotoolkit.github.io/metronome.html" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Audio Toolkit" />
-  <meta property="og:title" content="Online Metronome – Free, No Download" />
-  <meta property="og:description" content="A free, precise online metronome with tap tempo, right in your browser." />
-  <meta property="og:url" content="https://audiotoolkit.github.io/metronome.html" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Online Metronome – Free, No Download" />
-  <meta name="twitter:description" content="A free, precise online metronome, right in your browser." />
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Online Metronome – Free, No Download | Audio Toolkit</title>
+<meta content="A free, precise online metronome. Adjustable BPM and time signature, tap tempo, works right in your browser — no download, no signup." name="description"/>
+<meta content="online metronome, free metronome, metronome app, tap tempo" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://audiotoolkit.github.io/metronome.html" rel="canonical"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Audio Toolkit" property="og:site_name"/>
+<meta content="Online Metronome – Free, No Download" property="og:title"/>
+<meta content="A free, precise online metronome with tap tempo, right in your browser." property="og:description"/>
+<meta content="https://audiotoolkit.github.io/metronome.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Online Metronome – Free, No Download" name="twitter:title"/>
+<meta content="A free, precise online metronome, right in your browser." name="twitter:description"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -30,7 +30,7 @@
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -58,7 +58,7 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -68,8 +68,7 @@
   ]
 }
   </script>
-
-  <style>
+<style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669}
     html{scroll-behavior:smooth}
@@ -137,121 +136,102 @@
   </style>
 </head>
 <body>
-
 <nav>
-  <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
-  <ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+<a class="logo" href="index.html">Audio <span>Toolkit</span></a>
+<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Metronome</div>
-
+<div class="breadcrumb"><a href="index.html">Home</a> › Metronome</div>
 <section class="hero">
-  <div class="hero-badge">Free · No Download</div>
-  <h1>Online Metronome <span>Free</span></h1>
-  <p>A precise, no-frills metronome that runs right in your browser. Adjustable tempo, time signature, and tap tempo.</p>
+<div class="hero-badge">Free · No Download</div>
+<h1>Online Metronome <span>Free</span></h1>
+<p>A precise, no-frills metronome that runs right in your browser. Adjustable tempo, time signature, and tap tempo.</p>
 </section>
-
 <div class="tool-wrap">
-  <div class="tool-box">
-
-    <div class="bpm-display" id="bpmDisplay">120</div>
-    <div class="bpm-label">BPM</div>
-
-    <div class="beat-dots" id="beatDots"></div>
-
-    <div class="bpm-slider-row">
-      <input type="range" class="bpm-slider" id="bpmSlider" min="40" max="240" value="120" />
-    </div>
-
-    <div class="bpm-buttons">
-      <button class="bpm-btn" data-delta="-10">-10</button>
-      <button class="bpm-btn" data-delta="-1">-1</button>
-      <button class="bpm-btn" data-delta="1">+1</button>
-      <button class="bpm-btn" data-delta="10">+10</button>
-    </div>
-
-    <div class="row-controls">
-      <select id="timeSignature">
-        <option value="2">2/4</option>
-        <option value="3">3/4</option>
-        <option value="4" selected>4/4</option>
-        <option value="6">6/8</option>
-      </select>
-    </div>
-
-    <button class="main-btn" id="startBtn">▶ Start</button>
-    <button class="tap-btn" id="tapBtn">Tap Tempo</button>
-
-  </div>
+<div class="tool-box">
+<div class="bpm-display" id="bpmDisplay">120</div>
+<div class="bpm-label">BPM</div>
+<div class="beat-dots" id="beatDots"></div>
+<div class="bpm-slider-row">
+<input class="bpm-slider" id="bpmSlider" max="240" min="40" type="range" value="120"/>
 </div>
-
+<div class="bpm-buttons">
+<button class="bpm-btn" data-delta="-10">-10</button>
+<button class="bpm-btn" data-delta="-1">-1</button>
+<button class="bpm-btn" data-delta="1">+1</button>
+<button class="bpm-btn" data-delta="10">+10</button>
+</div>
+<div class="row-controls">
+<select id="timeSignature">
+<option value="2">2/4</option>
+<option value="3">3/4</option>
+<option selected="" value="4">4/4</option>
+<option value="6">6/8</option>
+</select>
+</div>
+<button class="main-btn" id="startBtn">▶ Start</button>
+<button class="tap-btn" id="tapBtn">Tap Tempo</button>
+</div>
+</div>
 <section class="content">
-
-  <div class="section-block">
-    <div class="section-label">How It Works</div>
-    <h2>How to Use the Metronome</h2>
-    <p><strong>1. Set your tempo.</strong> Drag the slider, use the +/- buttons, or tap the "Tap Tempo" button in rhythm to set the BPM automatically.</p>
-    <p><strong>2. Pick a time signature.</strong> The first beat of each measure gets a distinct accented click.</p>
-    <p><strong>3. Press Start.</strong> The metronome clicks steadily until you press Stop.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Why It Matters</div>
-    <h2>Why the Timing Is Precise</h2>
-    <p>Simple metronome implementations often use JavaScript's setInterval, which is not reliable for precise audio timing — it can drift by tens of milliseconds, especially if the browser tab is busy. This metronome instead uses the Web Audio API's own high-precision clock with a look-ahead scheduler, scheduling clicks slightly ahead of when they're needed so the actual playback stays locked to the beat.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Good To Know</div>
-    <h2>Tips for Practicing with a Metronome</h2>
-    <p><strong>Start slower than your target tempo.</strong> Practicing accurately at a slower speed builds the timing habit better than fighting through mistakes at full speed.</p>
-    <p><strong>Use the accented downbeat</strong> to keep track of where you are in the measure, especially useful for time signatures like 3/4 or 6/8.</p>
-    <p><strong>Keep the tab open and active.</strong> Browsers can throttle timers in inactive background tabs, which may affect timing if you switch away.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Common Questions</div>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How accurate is this metronome's timing? <span class="faq-arrow">▾</span></div>
-      <div class="faq-a">It uses the Web Audio API's own audio clock with a look-ahead scheduler, the same technique used by professional web-based audio tools, rather than JavaScript's regular timers which can drift. This keeps the click precisely on time even during long practice sessions.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is tap tempo?</div>
-      <div class="faq-a">Tap tempo lets you set the BPM by tapping a button in rhythm with a song or your own playing, instead of typing in a number. Tap at least four times for an accurate reading.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I change the time signature?</div>
-      <div class="faq-a">Yes. Choose from common time signatures, and the first beat of each measure is accented with a distinct click so you can hear the downbeat.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need to download anything?</div>
-      <div class="faq-a">No. This metronome runs entirely in your browser tab — just open the page and press start.</div>
-    </div>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">More Tools</div>
-    <h2>Related Tools</h2>
-    <div class="related-grid">
-      <a href="guitar-tuner.html" class="related-card"><h3>Guitar Tuner</h3><p>Tune your instrument using your microphone</p></a>
-      <a href="bpm-detector.html" class="related-card"><h3>BPM Detector</h3><p>Estimate the tempo of any audio file</p></a>
-    </div>
-  </div>
-
+<div class="section-block">
+<div class="section-label">How It Works</div>
+<h2>How to Use the Metronome</h2>
+<p><strong>1. Set your tempo.</strong> Drag the slider, use the +/- buttons, or tap the "Tap Tempo" button in rhythm to set the BPM automatically.</p>
+<p><strong>2. Pick a time signature.</strong> The first beat of each measure gets a distinct accented click.</p>
+<p><strong>3. Press Start.</strong> The metronome clicks steadily until you press Stop.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Why It Matters</div>
+<h2>Why the Timing Is Precise</h2>
+<p>Simple metronome implementations often use JavaScript's setInterval, which is not reliable for precise audio timing — it can drift by tens of milliseconds, especially if the browser tab is busy. This metronome instead uses the Web Audio API's own high-precision clock with a look-ahead scheduler, scheduling clicks slightly ahead of when they're needed so the actual playback stays locked to the beat.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Good To Know</div>
+<h2>Tips for Practicing with a Metronome</h2>
+<p><strong>Start slower than your target tempo.</strong> Practicing accurately at a slower speed builds the timing habit better than fighting through mistakes at full speed.</p>
+<p><strong>Use the accented downbeat</strong> to keep track of where you are in the measure, especially useful for time signatures like 3/4 or 6/8.</p>
+<p><strong>Keep the tab open and active.</strong> Browsers can throttle timers in inactive background tabs, which may affect timing if you switch away.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Common Questions</div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How accurate is this metronome's timing? <span class="faq-arrow">▾</span></div>
+<div class="faq-a">It uses the Web Audio API's own audio clock with a look-ahead scheduler, the same technique used by professional web-based audio tools, rather than JavaScript's regular timers which can drift. This keeps the click precisely on time even during long practice sessions.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is tap tempo?</div>
+<div class="faq-a">Tap tempo lets you set the BPM by tapping a button in rhythm with a song or your own playing, instead of typing in a number. Tap at least four times for an accurate reading.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I change the time signature?</div>
+<div class="faq-a">Yes. Choose from common time signatures, and the first beat of each measure is accented with a distinct click so you can hear the downbeat.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do I need to download anything?</div>
+<div class="faq-a">No. This metronome runs entirely in your browser tab — just open the page and press start.</div>
+</div>
+</div>
+<div class="section-block">
+<div class="section-label">More Tools</div>
+<h2>Related Tools</h2>
+<div class="related-grid">
+<a class="related-card" href="guitar-tuner.html"><h3>Guitar Tuner</h3><p>Tune your instrument using your microphone</p></a>
+<a class="related-card" href="bpm-detector.html"><h3>BPM Detector</h3><p>Estimate the tempo of any audio file</p></a>
+</div>
+</div>
 </section>
-
 <footer>
-  <div class="footer-logo">Audio <span>Toolkit</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms-of-service.html">Terms of Service</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <p>© 2026 Audio Toolkit. All rights reserved.</p>
+<div class="footer-logo">Audio <span>Toolkit</span></div>
+<div class="footer-links">
+<a href="index.html">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-service.html">Terms of Service</a>
+<a href="contact.html">Contact</a>
+</div>
+<p>© 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
-
 <script>
 let audioCtx = null;
 let isPlaying = false;
@@ -356,6 +336,5 @@ startBtn.addEventListener('click', () => {
   }
 });
 </script>
-
 </body>
 </html>

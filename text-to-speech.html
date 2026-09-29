@@ -1,24 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Text to Speech – Free Online Voice Reader | Audio Toolkit</title>
-  <meta name="description" content="Convert text to speech online, free, using your browser's built-in voices. Adjust speed and pitch, listen instantly — no signup, no upload." />
-  <meta name="keywords" content="text to speech online, free tts, text to voice, read text aloud online" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://audiotoolkit.github.io/text-to-speech.html" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Audio Toolkit" />
-  <meta property="og:title" content="Text to Speech – Free Online Voice Reader" />
-  <meta property="og:description" content="Convert text to speech online, free, using your browser's built-in voices." />
-  <meta property="og:url" content="https://audiotoolkit.github.io/text-to-speech.html" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Text to Speech – Free Online Voice Reader" />
-  <meta name="twitter:description" content="Convert text to speech online, free, right in your browser." />
-
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Text to Speech – Free Online Voice Reader | Audio Toolkit</title>
+<meta content="Convert text to speech online, free, using your browser's built-in voices. Adjust speed and pitch, listen instantly — no signup, no upload." name="description"/>
+<meta content="text to speech online, free tts, text to voice, read text aloud online" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://audiotoolkit.github.io/text-to-speech.html" rel="canonical"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Audio Toolkit" property="og:site_name"/>
+<meta content="Text to Speech – Free Online Voice Reader" property="og:title"/>
+<meta content="Convert text to speech online, free, using your browser's built-in voices." property="og:description"/>
+<meta content="https://audiotoolkit.github.io/text-to-speech.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Text to Speech – Free Online Voice Reader" name="twitter:title"/>
+<meta content="Convert text to speech online, free, right in your browser." name="twitter:description"/>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -30,7 +30,7 @@
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -58,7 +58,7 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -68,8 +68,7 @@
   ]
 }
   </script>
-
-  <style>
+<style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0F0C1A;--accent:#8B5CF6;--accent2:#7C3AED;--white:#F8FAFC;--slate:#94A3B8;--light:#F5F3FA;--border:#E3E0F0;--radius:14px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--green:#059669;--red:#DC2626}
     html{scroll-behavior:smooth}
@@ -137,118 +136,102 @@
   </style>
 </head>
 <body>
-
 <nav>
-  <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
-  <ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+<a class="logo" href="index.html">Audio <span>Toolkit</span></a>
+<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Text to Speech</div>
-
+<div class="breadcrumb"><a href="index.html">Home</a> › Text to Speech</div>
 <section class="hero">
-  <div class="hero-badge">Free · Private · No Signup</div>
-  <h1>Text to Speech <span>Online, Free</span></h1>
-  <p>Type or paste any text and hear it read aloud using your browser's own voices — instantly, with no upload.</p>
+<div class="hero-badge">Free · Private · No Signup</div>
+<h1>Text to Speech <span>Online, Free</span></h1>
+<p>Type or paste any text and hear it read aloud using your browser's own voices — instantly, with no upload.</p>
 </section>
-
 <div class="tool-wrap">
-  <div class="tool-box">
-
-    <textarea id="textInput" placeholder="Type or paste text here…" maxlength="5000"></textarea>
-    <div class="char-count"><span id="charCount">0</span> / 5000</div>
-
-    <div class="opts-grid">
-      <div class="opt-row">
-        <label>Voice</label>
-        <select id="voiceSelect"></select>
-      </div>
-    </div>
-
-    <div class="slider-grid">
-      <div>
-        <div class="slider-row-top"><label>Speed</label><span class="val" id="rateVal">1.0x</span></div>
-        <input type="range" id="rateSlider" min="0.5" max="2" value="1" step="0.1" />
-      </div>
-      <div>
-        <div class="slider-row-top"><label>Pitch</label><span class="val" id="pitchVal">1.0</span></div>
-        <input type="range" id="pitchSlider" min="0" max="2" value="1" step="0.1" />
-      </div>
-    </div>
-
-    <div class="controls-row">
-      <button class="btn btn-speak" id="speakBtn">▶ Speak</button>
-      <button class="btn btn-stop" id="stopBtn">■ Stop</button>
-    </div>
-    <div class="status-msg" id="statusMsg"></div>
-  </div>
+<div class="tool-box">
+<textarea id="textInput" maxlength="5000" placeholder="Type or paste text here…"></textarea>
+<div class="char-count"><span id="charCount">0</span> / 5000</div>
+<div class="opts-grid">
+<div class="opt-row">
+<label>Voice</label>
+<select id="voiceSelect"></select>
 </div>
-
+</div>
+<div class="slider-grid">
+<div>
+<div class="slider-row-top"><label>Speed</label><span class="val" id="rateVal">1.0x</span></div>
+<input id="rateSlider" max="2" min="0.5" step="0.1" type="range" value="1"/>
+</div>
+<div>
+<div class="slider-row-top"><label>Pitch</label><span class="val" id="pitchVal">1.0</span></div>
+<input id="pitchSlider" max="2" min="0" step="0.1" type="range" value="1"/>
+</div>
+</div>
+<div class="controls-row">
+<button class="btn btn-speak" id="speakBtn">▶ Speak</button>
+<button class="btn btn-stop" id="stopBtn">■ Stop</button>
+</div>
+<div class="status-msg" id="statusMsg"></div>
+</div>
+</div>
 <section class="content">
-
-  <div class="section-block">
-    <div class="section-label">How It Works</div>
-    <h2>How to Use Text to Speech</h2>
-    <p><strong>1. Type or paste your text.</strong> Up to 5,000 characters at a time.</p>
-    <p><strong>2. Pick a voice, speed, and pitch.</strong> Available voices depend on your device and browser.</p>
-    <p><strong>3. Click Speak.</strong> The text is read aloud immediately through your speakers.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Why It Matters</div>
-    <h2>Using Your Browser's Own Voices</h2>
-    <p>This tool uses the Web Speech API, a standard feature built into modern browsers, to access the text-to-speech voices already installed on your device — the same ones used by your phone's accessibility features or screen reader. That means your text is spoken locally on your device and is never sent to a server to be processed.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Good To Know</div>
-    <h2>Voice Availability Varies</h2>
-    <p><strong>Available voices depend on your device.</strong> iPhones, Android phones, and Macs generally ship with more natural-sounding neural voices than some desktop browsers on Windows or Linux, where voice options can be more limited or more robotic-sounding.</p>
-    <p><strong>This tool can't produce a downloadable audio file</strong> — browsers don't expose their built-in speech synthesis as a recordable stream. If you need an audio file, you'd need separate recording software to capture what plays.</p>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">Common Questions</div>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where do the voices come from? <span class="faq-arrow">▾</span></div>
-      <div class="faq-a">This tool uses your device and browser's own built-in text-to-speech voices, via the standard Web Speech API. The available voices and their quality vary by device and browser — more are usually available on a phone or Mac than some browsers on Windows.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my text sent to a server?</div>
-      <div class="faq-a">No. The text is spoken using your device's own speech engine directly in the browser. It is not uploaded or sent anywhere.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I download the speech as an audio file?</div>
-      <div class="faq-a">Not currently — browsers don't provide a way to capture their built-in speech synthesis output directly as a file. This tool plays the speech live; you would need separate screen/audio recording software to capture it as a file.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do some voices sound more natural than others?</div>
-      <div class="faq-a">Voice quality depends entirely on what's built into your operating system and browser, not on this tool. Mobile devices and Mac computers often include higher-quality neural voices than some desktop browsers.</div>
-    </div>
-  </div>
-
-  <div class="section-block">
-    <div class="section-label">More Tools</div>
-    <h2>Related Tools</h2>
-    <div class="related-grid">
-      <a href="voice-recorder.html" class="related-card"><h3>Voice Recorder</h3><p>Record from your microphone</p></a>
-      <a href="speed-changer.html" class="related-card"><h3>Speed Changer</h3><p>Speed up or slow down audio</p></a>
-    </div>
-  </div>
-
+<div class="section-block">
+<div class="section-label">How It Works</div>
+<h2>How to Use Text to Speech</h2>
+<p><strong>1. Type or paste your text.</strong> Up to 5,000 characters at a time.</p>
+<p><strong>2. Pick a voice, speed, and pitch.</strong> Available voices depend on your device and browser.</p>
+<p><strong>3. Click Speak.</strong> The text is read aloud immediately through your speakers.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Why It Matters</div>
+<h2>Using Your Browser's Own Voices</h2>
+<p>This tool uses the Web Speech API, a standard feature built into modern browsers, to access the text-to-speech voices already installed on your device — the same ones used by your phone's accessibility features or screen reader. That means your text is spoken locally on your device and is never sent to a server to be processed.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Good To Know</div>
+<h2>Voice Availability Varies</h2>
+<p><strong>Available voices depend on your device.</strong> iPhones, Android phones, and Macs generally ship with more natural-sounding neural voices than some desktop browsers on Windows or Linux, where voice options can be more limited or more robotic-sounding.</p>
+<p><strong>This tool can't produce a downloadable audio file</strong> — browsers don't expose their built-in speech synthesis as a recordable stream. If you need an audio file, you'd need separate recording software to capture what plays.</p>
+</div>
+<div class="section-block">
+<div class="section-label">Common Questions</div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where do the voices come from? <span class="faq-arrow">▾</span></div>
+<div class="faq-a">This tool uses your device and browser's own built-in text-to-speech voices, via the standard Web Speech API. The available voices and their quality vary by device and browser — more are usually available on a phone or Mac than some browsers on Windows.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my text sent to a server?</div>
+<div class="faq-a">No. The text is spoken using your device's own speech engine directly in the browser. It is not uploaded or sent anywhere.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I download the speech as an audio file?</div>
+<div class="faq-a">Not currently — browsers don't provide a way to capture their built-in speech synthesis output directly as a file. This tool plays the speech live; you would need separate screen/audio recording software to capture it as a file.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do some voices sound more natural than others?</div>
+<div class="faq-a">Voice quality depends entirely on what's built into your operating system and browser, not on this tool. Mobile devices and Mac computers often include higher-quality neural voices than some desktop browsers.</div>
+</div>
+</div>
+<div class="section-block">
+<div class="section-label">More Tools</div>
+<h2>Related Tools</h2>
+<div class="related-grid">
+<a class="related-card" href="voice-recorder.html"><h3>Voice Recorder</h3><p>Record from your microphone</p></a>
+<a class="related-card" href="speed-changer.html"><h3>Speed Changer</h3><p>Speed up or slow down audio</p></a>
+</div>
+</div>
 </section>
-
 <footer>
-  <div class="footer-logo">Audio <span>Toolkit</span></div>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms-of-service.html">Terms of Service</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <p>© 2026 Audio Toolkit. All rights reserved.</p>
+<div class="footer-logo">Audio <span>Toolkit</span></div>
+<div class="footer-links">
+<a href="index.html">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="about.html">About</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-service.html">Terms of Service</a>
+<a href="contact.html">Contact</a>
+</div>
+<p>© 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
-
 <script>
 const textInput = document.getElementById('textInput');
 const charCount = document.getElementById('charCount');
@@ -319,6 +302,5 @@ stopBtn.addEventListener('click', () => {
   statusMsg.textContent = '';
 });
 </script>
-
 </body>
 </html>

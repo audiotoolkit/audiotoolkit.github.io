@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Vocal Remover – Free Karaoke Track Maker Online | Audio Toolkit</title>
-<meta name="description" content="Remove or reduce vocals from a song online, free, for a rough karaoke track. Honest about its limits — entirely in your browser, no upload." />
-<meta name="keywords" content="vocal remover, vocal remover online, remove vocals from song, karaoke track maker free, instrumental maker" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://audiotoolkit.github.io/vocal-remover.html" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Audio Toolkit" />
-<meta property="og:title" content="Vocal Remover – Free Karaoke Track Maker" />
-<meta property="og:description" content="Remove or reduce vocals from a song, free, entirely in your browser." />
-<meta property="og:url" content="https://audiotoolkit.github.io/vocal-remover.html" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Vocal Remover – Free Karaoke Track Maker" />
-<meta name="twitter:description" content="Remove or reduce vocals from a song, free, entirely in your browser." />
+<meta content="Remove or reduce vocals from a song online, free, for a rough karaoke track. Honest about its limits — entirely in your browser, no upload." name="description"/>
+<meta content="vocal remover, vocal remover online, remove vocals from song, karaoke track maker free, instrumental maker" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://audiotoolkit.github.io/vocal-remover.html" rel="canonical"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Audio Toolkit" property="og:site_name"/>
+<meta content="Vocal Remover – Free Karaoke Track Maker" property="og:title"/>
+<meta content="Remove or reduce vocals from a song, free, entirely in your browser." property="og:description"/>
+<meta content="https://audiotoolkit.github.io/vocal-remover.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Vocal Remover – Free Karaoke Track Maker" name="twitter:title"/>
+<meta content="Remove or reduce vocals from a song, free, entirely in your browser." name="twitter:description"/>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -147,9 +148,9 @@ footer p{font-size:.8rem}
 <body>
 <nav>
 <a class="logo" href="index.html">Audio <span>Toolkit</span></a>
-<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Vocal Remover</div>
+<div class="breadcrumb"><a href="index.html">Home</a> › Vocal Remover</div>
 <section class="hero">
 <div class="hero-badge">Free · Private · No Signup</div>
 <h1>Vocal Remover <span>Online, Free</span></h1>
@@ -159,10 +160,10 @@ footer p{font-size:.8rem}
 <div class="tool-box">
 <div class="honesty-banner">⚠ <strong>Honest expectations:</strong> this reduces vocals panned dead-center using phase cancellation — it's not AI vocal isolation. Results vary a lot by track, and center-panned instruments (often bass and kick drum) get reduced too.</div>
 <div class="upload-zone" id="uploadZone">
-<div class="upload-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+<div class="upload-icon"><svg viewbox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></div>
 <h3>Drop a stereo song here</h3>
 <p>or click to browse — MP3, WAV, OGG, M4A supported</p>
-<input type="file" id="fileInput" accept="audio/*" />
+<input accept="audio/*" id="fileInput" type="file"/>
 </div>
 <div class="editor" id="editor">
 <div class="file-info">
@@ -172,7 +173,7 @@ footer p{font-size:.8rem}
 <div class="mono-warning" id="monoWarning">This file is mono (single channel) — this technique needs stereo audio to work, so it won't have any effect here.</div>
 <div class="strength-row">
 <div class="strength-row-top"><label>Reduction Strength</label><span class="val" id="strengthVal">100%</span></div>
-<input type="range" id="strengthSlider" min="0" max="100" value="100" step="5" />
+<input id="strengthSlider" max="100" min="0" step="5" type="range" value="100"/>
 </div>
 <div class="controls-row">
 <button class="btn btn-preview" id="previewBtn">▶ Preview</button>
@@ -227,15 +228,15 @@ footer p{font-size:.8rem}
 <div class="section-label">More Tools</div>
 <h2>Related Tools</h2>
 <div class="related-grid">
-<a href="audio-equalizer.html" class="related-card"><h3>Audio Equalizer</h3><p>Adjust bass, mid, and treble</p></a>
-<a href="stereo-to-mono.html" class="related-card"><h3>Stereo to Mono</h3><p>Combine channels into one</p></a>
+<a class="related-card" href="audio-equalizer.html"><h3>Audio Equalizer</h3><p>Adjust bass, mid, and treble</p></a>
+<a class="related-card" href="stereo-to-mono.html"><h3>Stereo to Mono</h3><p>Combine channels into one</p></a>
 </div>
 </div>
 </section>
 <footer>
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a><a href="audio-tools.html">Audio Tools</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms-of-service.html">Terms of Service</a>

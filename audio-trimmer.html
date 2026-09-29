@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Audio Trimmer & MP3 Cutter – Cut Audio Online Free | Audio Toolkit</title>
-<meta name="description" content="Trim or cut any audio file online for free — also works as an MP3 cutter or audio cutter for any format. Select exactly the part you want, preview it, and download instantly. No upload, no signup." />
-<meta name="keywords" content="audio trimmer, mp3 cutter, audio cutter, cut mp3 online, trim audio online, mp3 cutter free, sound trimmer" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://audiotoolkit.github.io/audio-trimmer.html" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Audio Toolkit" />
-<meta property="og:title" content="Audio Trimmer & MP3 Cutter – Cut Audio Online Free" />
-<meta property="og:description" content="Trim or cut any audio file online for free. Also works as an MP3 cutter or audio cutter for any format. Works entirely in your browser." />
-<meta property="og:url" content="https://audiotoolkit.github.io/audio-trimmer.html" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Audio Trimmer & MP3 Cutter – Cut Audio Online Free" />
-<meta name="twitter:description" content="Trim or cut any audio file online for free. Select exactly the part you want, preview it, and download instantly." />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trim Audio Online Free – Cut MP3, WAV &amp; More</title>
+<meta content="Trim MP3, WAV, M4A and other audio files online for free. Select the exact start and end, preview the result, and download the trimmed audio." name="description"/>
+<meta content="audio trimmer, mp3 cutter, audio cutter, cut mp3 online, trim audio online, mp3 cutter free, sound trimmer" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://audiotoolkit.github.io/audio-trimmer.html" rel="canonical"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Audio Toolkit" property="og:site_name"/>
+<meta content="Trim Audio Online Free – Cut MP3, WAV &amp; More" property="og:title"/>
+<meta content="Trim MP3, WAV, M4A and other audio files online for free. Select the exact start and end, preview the result, and download the trimmed audio." property="og:description"/>
+<meta content="https://audiotoolkit.github.io/audio-trimmer.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Trim Audio Online Free – Cut MP3, WAV &amp; More" name="twitter:title"/>
+<meta content="Trim MP3, WAV, M4A and other audio files online for free. Select the exact start and end, preview the result, and download the trimmed audio." name="twitter:description"/>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -172,9 +173,9 @@ footer p{font-size:.8rem}
 <li><a href="index.html#tools">All Tools</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
-</ul>
+<li><a href="audio-tools.html">Categories</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Audio Trimmer</div>
+<div class="breadcrumb"><a href="index.html">Home</a> › Audio Trimmer</div>
 <section class="hero">
 <div class="hero-badge">Free · Private · No Signup</div>
 <h1>Trim Audio <span>Online, Free</span></h1>
@@ -184,10 +185,10 @@ footer p{font-size:.8rem}
 <div class="tool-wrap">
 <div class="tool-box">
 <div class="upload-zone" id="uploadZone">
-<div class="upload-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+<div class="upload-icon"><svg viewbox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></div>
 <h3>Drop an audio file here</h3>
 <p>or click to browse — MP3, WAV, OGG, M4A supported</p>
-<input type="file" id="fileInput" accept="audio/*" />
+<input accept="audio/*" id="fileInput" type="file"/>
 </div>
 <div class="editor" id="editor">
 <div class="file-info">
@@ -198,18 +199,18 @@ footer p{font-size:.8rem}
 <div class="selection-bar">
 <div class="range-track"></div>
 <div class="range-fill" id="rangeFill"></div>
-<input type="range" class="trim-handle" id="startHandle" min="0" max="1000" value="0" />
-<input type="range" class="trim-handle" id="endHandle" min="0" max="1000" value="1000" />
+<input class="trim-handle" id="startHandle" max="1000" min="0" type="range" value="0"/>
+<input class="trim-handle" id="endHandle" max="1000" min="0" type="range" value="1000"/>
 </div>
 <div class="time-row">
 <div class="time-field">
 <label>Start</label>
-<input type="text" id="startTime" value="0:00.0" />
+<input id="startTime" type="text" value="0:00.0"/>
 </div>
 <div class="duration-readout">Selected: <strong id="selDuration">0:00</strong></div>
 <div class="time-field">
 <label>End</label>
-<input type="text" id="endTime" value="0:00.0" />
+<input id="endTime" type="text" value="0:00.0"/>
 </div>
 </div>
 <div class="controls-row">
@@ -275,18 +276,18 @@ footer p{font-size:.8rem}
 <div class="section-label">More Tools</div>
 <h2>Related Tools</h2>
 <div class="related-grid">
-<a href="audio-converter.html" class="related-card"><h3>Audio Converter</h3><p>Convert between MP3 and WAV formats</p></a>
-<a href="audio-merger.html" class="related-card"><h3>Audio Merger</h3><p>Combine multiple clips into one file</p></a>
-<a href="m4a-to-mp3.html" class="related-card"><h3>M4A to MP3</h3><p>Convert iPhone audio to universal MP3</p></a>
-<a href="fade-in-out.html" class="related-card"><h3>Fade In/Out Adder</h3><p>Smooth out abrupt starts and endings</p></a>
-<a href="audio-reverser.html" class="related-card"><h3>Audio Reverser</h3><p>Play any audio file backwards</p></a>
+<a class="related-card" href="audio-converter.html"><h3>Audio Converter</h3><p>Convert between MP3 and WAV formats</p></a>
+<a class="related-card" href="audio-merger.html"><h3>Audio Merger</h3><p>Combine multiple clips into one file</p></a>
+<a class="related-card" href="m4a-to-mp3.html"><h3>M4A to MP3</h3><p>Convert iPhone audio to universal MP3</p></a>
+<a class="related-card" href="fade-in-out.html"><h3>Fade In/Out Adder</h3><p>Smooth out abrupt starts and endings</p></a>
+<a class="related-card" href="audio-reverser.html"><h3>Audio Reverser</h3><p>Play any audio file backwards</p></a>
 </div>
 </div>
 </section>
 <footer>
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="index.html">Home</a>
+<a href="index.html">Home</a><a href="audio-tools.html">Audio Tools</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms-of-service.html">Terms of Service</a>
