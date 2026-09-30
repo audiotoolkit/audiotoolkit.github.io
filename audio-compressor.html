@@ -266,7 +266,7 @@
 </div>
 <p>© 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
-<script onerror="window.__lameLoaded=false; onLameFailed();" onload="window.__lameLoaded=true; onLameReady();" src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.all.js"></script>
+<script>/* MP3 encoder is loaded dynamically after the page code is ready. */</script>
 <script>
 let audioCtx = null;
 let audioBuffer = null;
@@ -287,13 +287,51 @@ const previewBtn = document.getElementById('previewBtn');
 const downloadBtn = document.getElementById('downloadBtn');
 const statusMsg = document.getElementById('statusMsg');
 
-function onLameReady() { mp3Ready = true; }
+function onLameReady() {
+  if (window.lamejs && window.lamejs.Mp3Encoder) {
+    mp3Ready = true;
+    statusMsg.textContent = 'MP3 encoder ready.';
+    statusMsg.className = 'status-msg success';
+  } else onLameFailed();
+}
 function onLameFailed() {
   mp3Ready = false;
-  statusMsg.textContent = 'MP3 encoder unavailable — will export as WAV instead (no size reduction).';
+  statusMsg.textContent = 'MP3 encoder could not load — WAV export remains available.';
   statusMsg.className = 'status-msg warn';
 }
-setTimeout(function () { if (typeof window.__lameLoaded === 'undefined') onLameFailed(); }, 6000);
+function loadMp3Encoder() {
+  if (window.lamejs && window.lamejs.Mp3Encoder) { onLameReady(); return; }
+  const sources = [
+    'https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.all.js',
+    'https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.all.js'
+  ];
+  let index = 0;
+  const started = Date.now();
+  function tryNext() {
+    if (window.lamejs && window.lamejs.Mp3Encoder) { onLameReady(); return; }
+    if (index >= sources.length || Date.now() - started > 10000) { onLameFailed(); return; }
+    const script = document.createElement('script');
+    const src = sources[index++];
+    let settled = false;
+    const timer = setTimeout(() => finish(false), 4500);
+    function finish(ok) {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      if (ok && window.lamejs && window.lamejs.Mp3Encoder) onLameReady();
+      else tryNext();
+    }
+    script.onload = () => finish(true);
+    script.onerror = () => finish(false);
+    script.src = src;
+    script.async = true;
+    document.head.appendChild(script);
+  }
+  statusMsg.textContent = 'Loading MP3 encoder… WAV export is available meanwhile.';
+  statusMsg.className = 'status-msg';
+  tryNext();
+}
+loadMp3Encoder();
 
 uploadZone.addEventListener('click', () => fileInput.click());
 uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });

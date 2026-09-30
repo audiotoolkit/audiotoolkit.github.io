@@ -246,7 +246,7 @@
 </div>
 <p>© 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
-<script onerror="window.__lameLoaded=false; onLameFailed();" onload="window.__lameLoaded=true; onLameReady();" src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.all.js"></script>
+<script>/* MP3 encoder is loaded dynamically after the page code is ready. */</script>
 <script>
 let audioCtx = null;
 let audioBuffer = null;
@@ -265,16 +265,53 @@ const statusMsg = document.getElementById('statusMsg');
 const convertBtn = document.getElementById('convertBtn');
 
 function onLameReady() {
+  if (!window.lamejs || !window.lamejs.Mp3Encoder) { onLameFailed(); return; }
   mp3Ready = true;
   btnMp3.disabled = false;
   btnMp3.innerHTML = 'MP3<small>Smaller file</small>';
+  if (typeof selectFormat === 'function') selectFormat('mp3');
+  if (statusMsg) { statusMsg.textContent = 'MP3 encoder ready.'; statusMsg.className = 'status-msg success'; }
 }
 function onLameFailed() {
   mp3Ready = false;
-  btnMp3.innerHTML = 'MP3<small>Unavailable — use WAV</small>';
+  btnMp3.disabled = true;
+  btnMp3.innerHTML = 'MP3<small>Unavailable — WAV is ready</small>';
+  if (typeof selectFormat === 'function') selectFormat('wav');
+  if (statusMsg) { statusMsg.textContent = 'MP3 encoder could not load. WAV conversion is still available.'; statusMsg.className = 'status-msg warn'; }
 }
-// Safety timeout: if the script tag neither fires load nor error within 6s, treat as failed
-setTimeout(function () { if (typeof window.__lameLoaded === 'undefined') onLameFailed(); }, 6000);
+function loadMp3Encoder() {
+  if (window.lamejs && window.lamejs.Mp3Encoder) { onLameReady(); return; }
+  const sources = [
+    'https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.all.js',
+    'https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.all.js'
+  ];
+  let index = 0;
+  const started = Date.now();
+  function tryNext() {
+    if (window.lamejs && window.lamejs.Mp3Encoder) { onLameReady(); return; }
+    if (index >= sources.length || Date.now() - started > 10000) { onLameFailed(); return; }
+    const script = document.createElement('script');
+    const src = sources[index++];
+    let settled = false;
+    const timer = setTimeout(() => finish(false), 4500);
+    function finish(ok) {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      if (ok && window.lamejs && window.lamejs.Mp3Encoder) onLameReady();
+      else tryNext();
+    }
+    script.onload = () => finish(true);
+    script.onerror = () => finish(false);
+    script.src = src;
+    script.async = true;
+    document.head.appendChild(script);
+  }
+  if (statusMsg) { statusMsg.textContent = 'Loading MP3 encoder… WAV is ready now.'; statusMsg.className = 'status-msg'; }
+  if (typeof selectFormat === 'function') selectFormat('wav');
+  tryNext();
+}
+loadMp3Encoder();
 
 uploadZone.addEventListener('click', () => fileInput.click());
 uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });
