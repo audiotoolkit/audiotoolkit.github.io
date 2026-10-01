@@ -8,6 +8,11 @@
 <meta content="Audio Toolkit's privacy policy. Learn how your audio files are processed locally in your browser and what, if anything, is collected." name="description"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://audiotoolkit.github.io/privacy-policy.html" rel="canonical"/>
+<meta property="og:image" content="https://audiotoolkit.github.io/assets/og-default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Audio Toolkit – free online audio tools" />
+<meta name="twitter:image" content="https://audiotoolkit.github.io/assets/og-default.png" />
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238B5CF6'/%3E%3Cpath d='M25 50 L35 30 L45 65 L55 20 L65 70 L75 50' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon"/>
 <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -19,7 +24,7 @@
     .nav-links{display:flex;gap:26px;list-style:none}
     .nav-links a{color:#B8B3D1;text-decoration:none;font-size:.9rem;font-weight:500}
     .nav-links a:hover{color:var(--accent)}
-    @media(max-width:640px){.nav-links{display:none}}
+    @media(max-width:640px){.nav-links{gap:14px}.nav-links a{font-size:.82rem}.logo{font-size:1.05rem}}
     .breadcrumb{background:var(--light);border-bottom:1px solid var(--border);padding:10px 5%;font-size:.82rem;color:var(--slate)}
     .breadcrumb a{color:var(--accent2);text-decoration:none}
     .wrap{max-width:760px;margin:0 auto;padding:50px 5% 70px}
@@ -35,7 +40,7 @@
     .footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
     footer p{font-size:.8rem}
   </style>
-<meta content="website" property="og:type"/><meta content="Audio Toolkit" property="og:site_name"/><meta content="Privacy Policy – Audio Toolkit" property="og:title"/><meta content="Audio Toolkit's privacy policy. Learn how your audio files are processed locally in your browser and what, if anything, is collected." property="og:description"/><meta content="https://audiotoolkit.github.io/privacy-policy.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Privacy Policy – Audio Toolkit" name="twitter:title"/><meta content="Audio Toolkit's privacy policy. Learn how your audio files are processed locally in your browser and what, if anything, is collected." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/><script type="application/ld+json">{
+<meta content="website" property="og:type"/><meta content="Audio Toolkit" property="og:site_name"/><meta content="Privacy Policy – Audio Toolkit" property="og:title"/><meta content="Audio Toolkit's privacy policy. Learn how your audio files are processed locally in your browser and what, if anything, is collected." property="og:description"/><meta content="https://audiotoolkit.github.io/privacy-policy.html" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Privacy Policy – Audio Toolkit" name="twitter:title"/><meta content="Audio Toolkit's privacy policy. Learn how your audio files are processed locally in your browser and what, if anything, is collected." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -55,18 +60,20 @@
 }</script></head>
 <body>
 <nav>
-<a class="logo" href="index.html">Audio <span>Toolkit</span></a>
-<ul class="nav-links"><li><a href="index.html#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
+<a class="logo" href="/">Audio <span>Toolkit</span></a>
+<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
 </nav>
-<div class="breadcrumb"><a href="index.html">Home</a> › Privacy Policy</div>
+<div class="breadcrumb"><a href="/">Home</a> › Privacy Policy</div>
 <div class="wrap">
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: September 2026</p>
 <p>Audio Toolkit provides free browser-based audio tools. This page explains what happens to your files and what, if any, information we collect.</p>
 <h2>Your Audio Files</h2>
-<p>Every tool on this site processes your audio file locally, inside your own browser, using the Web Audio API. Your file is never uploaded to our servers or to any third party — there is no upload step at all. When you close the tab, the file and any trimmed or edited output are gone unless you've downloaded them.</p>
+<p>The file-based tools (converters, trimmer, merger, compressor, equalizer and similar) process your audio file locally, inside your own browser, using the Web Audio API. Those tools do not upload your file to our servers or to any third party; there is no upload step. When you close the tab, the file and any trimmed or edited output are gone unless you've downloaded them.</p>
+<h2>Microphone, Speech and Voice Tools</h2>
+<p>The Voice Recorder, Guitar Tuner, BPM Detector and similar tools ask your browser for microphone permission. You can refuse or revoke it in your browser settings; audio from these tools is handled in your browser. <strong>Voice to Text is different:</strong> it uses your browser's built-in speech recognition. In some browsers (Chrome, for example) that feature sends microphone audio to the browser vendor's servers for transcription, under the vendor's own privacy policy. <strong>Text to Speech</strong> uses voices provided by your browser or device; some voices are online voices that may send the text to the browser vendor. Online voices are labeled in the voice list.</p>
 <h2>What We Don't Collect</h2>
-<p>This site does not use cookies, does not run analytics scripts, and does not load fonts, ads, or tracking scripts from third-party services. There is currently no account system, so we don't collect names, emails, or any personal information through the tools themselves.</p>
+<p>This site does not use cookies, does not run analytics scripts, and does not load fonts, ads, or tracking scripts from third-party services. The one third-party resource currently loaded is the open-source lamejs MP3 encoder, served from the jsDelivr CDN on pages that export MP3 files. Loading it means jsDelivr receives the ordinary request details your browser sends (such as your IP address); your audio files are not sent there. There is currently no account system, so we don't collect names, emails, or any personal information through the tools themselves.</p>
 <h2>Hosting</h2>
 <p>This site is hosted on GitHub Pages. GitHub, as our hosting provider, may log standard server access information (such as IP address and browser type) for security and operational purposes, independent of anything we do. You can read GitHub's own privacy statement for details on what they collect as a host.</p>
 <h2>If This Changes</h2>
@@ -77,7 +84,7 @@
 <footer>
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="index.html">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="/">Home</a><a href="audio-tools.html">Audio Tools</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms-of-service.html">Terms of Service</a>
