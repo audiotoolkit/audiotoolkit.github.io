@@ -132,7 +132,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(15,12,26,0.96);backdrop-fi
 .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(139,92,246,0.04)}
 .upload-icon{width:52px;height:52px;margin:0 auto 14px;background:rgba(139,92,246,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center}
 .upload-icon svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:2}
-.upload-zone h3{font-size:1.05rem;font-weight:700;margin-bottom:6px}
+.upload-zone h2{font-size:1.05rem;font-weight:700;margin-bottom:6px}
 .upload-zone p{color:var(--slate);font-size:.88rem}
 .upload-zone input{display:none}
 .editor{display:none}
@@ -182,17 +182,19 @@ footer p{font-size:.8rem}
 button.faq-q{width:100%;background:none;border:0;padding:0;text-align:left;font-family:inherit;color:inherit}
 .faq-q:focus-visible,.nav-links a:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
-<meta content="#0F0C1A" name="theme-color"/></head>
+<meta content="#0F0C1A" name="theme-color"/><link rel="stylesheet" href="/assets/shell.css">
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMVGCV79"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
+<nav class="site-nav" aria-label="Main">
 <a class="logo" href="/">Audio <span>Toolkit</span></a>
-<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="audio-tools.html">Categories</a></li></ul>
+<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="audio-tools.html">Categories</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
 </nav>
+<main id="main">
 <div class="breadcrumb"><a href="/">Home</a> › <a href="audio-tools.html">Audio Tools</a> › <a href="audio-converters.html">Audio Converters</a> › Video to MP3</div>
 <section class="hero">
 <div class="hero-badge">Free · Private · No Signup</div>
@@ -203,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="tool-box">
 <div class="upload-zone" id="uploadZone">
 <div class="upload-icon"><svg viewbox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect height="14" rx="2" ry="2" width="15" x="1" y="5"></rect></svg></div>
-<h3>Drop a video file here</h3>
+<h2>Drop a video file here</h2>
 <p>or click to browse — MP4, MOV, WEBM supported</p>
 <input accept="video/*" id="fileInput" type="file" aria-label="Choose video file" />
 </div>
@@ -286,16 +288,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </section>
-<footer>
+</main>
+<footer class="site-footer">
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="/">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="/">Home</a>
+<a href="audio-tools.html">Audio Tools</a>
+<a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
 <a href="terms-of-service.html">Terms of Service</a>
 <a href="contact.html">Contact</a>
 </div>
-<p>© 2026 Audio Toolkit. All rights reserved.</p>
+<p>&copy; 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
 <script>/* MP3 encoder is loaded dynamically after the page code is ready. */</script>
 <script>

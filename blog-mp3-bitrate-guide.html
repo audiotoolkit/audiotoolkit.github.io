@@ -80,17 +80,19 @@ footer{background:var(--bg);color:#8781A0;text-align:center;padding:34px 5%;marg
 .footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
 footer p{font-size:.8rem}
 </style>
-<meta content="summary_large_image" name="twitter:card"/><meta content="MP3 Bitrate Guide – 128, 192, 256 or 320 kbps?" name="twitter:title"/><meta content="Understand MP3 bitrate and choose a practical setting for music, podcasts, voice recordings, and other audio without wasting file size." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/></head>
+<meta content="summary_large_image" name="twitter:card"/><meta content="MP3 Bitrate Guide – 128, 192, 256 or 320 kbps?" name="twitter:title"/><meta content="Understand MP3 bitrate and choose a practical setting for music, podcasts, voice recordings, and other audio without wasting file size." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/><link rel="stylesheet" href="/assets/shell.css">
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMVGCV79"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
+<nav class="site-nav" aria-label="Main">
 <a class="logo" href="/">Audio <span>Toolkit</span></a>
-<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="audio-tools.html">Categories</a><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li></ul>
+<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="audio-tools.html">Categories</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
 </nav>
+<main id="main">
 <div class="breadcrumb"><a href="/">Home</a> › <a href="blog.html">Blog</a> › MP3 Bitrate Guide</div>
 <article>
 <div class="badge">Format Guide</div>
@@ -99,13 +101,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h2>What bitrate actually means</h2>
 <p>Bitrate is how much data is used per second of audio, measured in kilobits per second (kbps). Higher bitrate means less compression, which generally means better quality and a larger file. It's a trade-off dial, not a quality score by itself — the right number depends entirely on what you're encoding and what you're doing with it.</p>
 <h2>Quick recommendations by use case</h2>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Use case</th><th>Recommended bitrate</th><th>Why</th></tr>
 <tr><td>Music, general listening</td><td>192–256 kbps</td><td>Good balance of quality and file size for most ears and most devices</td></tr>
 <tr><td>Music, audiophile / production</td><td>320 kbps</td><td>The highest standard MP3 rate; noticeably better on complex, layered tracks</td></tr>
 <tr><td>Podcasts, spoken word</td><td>96–128 kbps</td><td>Speech doesn't need as much data as music to sound clear</td></tr>
 <tr><td>Voice memos, dictation</td><td>64–96 kbps</td><td>Clarity matters more than fidelity; smaller files are easier to share</td></tr>
-</table>
+</table></div>
 <h2>Why podcasts and voice memos don't need 320 kbps</h2>
 <p>MP3's compression targets the parts of audio human hearing is least sensitive to. Music has a wide frequency range and complex layering, so it benefits more from extra bitrate. Speech occupies a narrower frequency range and is simpler, so it holds up fine at much lower bitrates — encoding a podcast at 320 kbps mostly just makes a bigger file without an audible improvement.</p>
 <h2>Can you "upgrade" a file's bitrate later?</h2>
@@ -118,16 +120,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <p><strong>Related tools:</strong> <a href="audio-compressor.html">Audio Compressor</a> · <a href="wav-to-mp3.html">WAV to MP3</a></p>
 </article>
-<footer>
+</main>
+<footer class="site-footer">
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="/">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="/">Home</a>
+<a href="audio-tools.html">Audio Tools</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-service.html">Terms of Service</a>
 <a href="contact.html">Contact</a>
 </div>
-<p>© 2026 Audio Toolkit. All rights reserved.</p>
+<p>&copy; 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
 </body>
 </html>

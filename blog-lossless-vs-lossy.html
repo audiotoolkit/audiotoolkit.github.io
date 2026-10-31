@@ -80,17 +80,19 @@ footer{background:var(--bg);color:#8781A0;text-align:center;padding:34px 5%;marg
 .footer-links a{color:#8781A0;text-decoration:none;font-size:.83rem}
 footer p{font-size:.8rem}
 </style>
-<meta content="summary_large_image" name="twitter:card"/><meta content="Lossless vs Lossy Audio – FLAC, WAV &amp; MP3 Explained" name="twitter:title"/><meta content="Understand lossless and lossy audio formats, including FLAC, WAV, and MP3, and choose a format based on quality, compatibility, and file size." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/></head>
+<meta content="summary_large_image" name="twitter:card"/><meta content="Lossless vs Lossy Audio – FLAC, WAV &amp; MP3 Explained" name="twitter:title"/><meta content="Understand lossless and lossy audio formats, including FLAC, WAV, and MP3, and choose a format based on quality, compatibility, and file size." name="twitter:description"/><meta content="#0F0C1A" name="theme-color"/><link rel="stylesheet" href="/assets/shell.css">
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMVGCV79"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
+<nav class="site-nav" aria-label="Main">
 <a class="logo" href="/">Audio <span>Toolkit</span></a>
-<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="audio-tools.html">Categories</a><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li></ul>
+<ul class="nav-links"><li><a href="/#tools">All Tools</a></li><li><a href="audio-tools.html">Categories</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
 </nav>
+<main id="main">
 <div class="breadcrumb"><a href="/">Home</a> › <a href="blog.html">Blog</a> › Lossless vs Lossy</div>
 <article>
 <div class="badge">Format Guide</div>
@@ -100,12 +102,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>MP3 and AAC (M4A) use psychoacoustic modeling — they analyze what a typical human ear is least likely to notice (certain frequencies masked by louder nearby sounds, for example) and discard that data to shrink the file. Done well, at a reasonable bitrate, most listeners can't detect what's missing. Done poorly, at a low bitrate, you can hear artifacts — a slight "swishy" or muffled quality, especially on cymbals and complex passages.</p>
 <h2>What "lossless" actually preserves</h2>
 <p>WAV stores audio completely uncompressed — every single sample, exactly as recorded. FLAC compresses the file size (similar to how a ZIP file shrinks a document) without discarding any audio data at all; unzip it, so to speak, and you get back the exact original waveform, bit for bit. Both are lossless; they just differ in file size, since FLAC applies mathematical compression that WAV doesn't.</p>
-<table>
+<div class="table-scroll"><table>
 <tr><th>Format</th><th>Type</th><th>Relative size</th><th>Best for</th></tr>
 <tr><td>WAV</td><td>Lossless, uncompressed</td><td>Largest</td><td>Editing, production, software that requires it</td></tr>
 <tr><td>FLAC</td><td>Lossless, compressed</td><td>~50–60% of WAV</td><td>Archiving, audiophile listening, when size matters more than WAV but quality can't be compromised</td></tr>
 <tr><td>MP3 (320 kbps)</td><td>Lossy</td><td>~10–15% of WAV</td><td>General listening, sharing, storage-constrained situations</td></tr>
-</table>
+</table></div>
 <h2>Would you actually notice?</h2>
 <p>On a phone speaker, cheap earbuds, or in a noisy environment — almost certainly not. On high-quality headphones or studio monitors, in a quiet room, with a well-mastered, detailed recording, some listeners can pick out subtle differences at lower MP3 bitrates. At 320 kbps, reliably telling MP3 apart from lossless in a genuine blind test is difficult even for experienced listeners.</p>
 <h2>So which should you use?</h2>
@@ -116,16 +118,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <p><strong>Related tools:</strong> <a href="wav-to-mp3.html">WAV to MP3</a></p>
 </article>
-<footer>
+</main>
+<footer class="site-footer">
 <div class="footer-logo">Audio <span>Toolkit</span></div>
 <div class="footer-links">
-<a href="/">Home</a><a href="audio-tools.html">Audio Tools</a>
+<a href="/">Home</a>
+<a href="audio-tools.html">Audio Tools</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
 <a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-service.html">Terms of Service</a>
 <a href="contact.html">Contact</a>
 </div>
-<p>© 2026 Audio Toolkit. All rights reserved.</p>
+<p>&copy; 2026 Audio Toolkit. All rights reserved.</p>
 </footer>
 </body>
 </html>
